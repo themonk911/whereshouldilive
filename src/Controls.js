@@ -33,7 +33,7 @@ class Controls extends Component {
     return (
       <div>
         <SimpleExample intensity={this.state.intensity} />
-        <Slider step={10} value={this.state.intensity} onChange={this.handleChange}/>
+        <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
         <div id='counter'>{this.state.intensity}</div>
 
     </div>
