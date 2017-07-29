@@ -39,12 +39,34 @@ class Controls extends Component {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 
           <ul className="actions vertical">
-            <li><a href="#" className="button">Learn More</a></li>
-            <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+            <li>
+              Police Stations
+              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+            </li>
+            <li>
+              Parks
+              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+            </li>
+            <li>
+              Traffic
+              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+            </li>
+            <li>
+              Food
+              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+            </li>
           </ul>
 
-          <div id='counter'>{this.state.intensity}</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+
+          <ul className="actions vertical">
+            <li><a href="#" className="button">Learn More</a></li>
+          </ul>
+
+
         </div>
+
+
 
         <div className="image" alt="">
           <SimpleExample intensity={this.state.intensity} />
