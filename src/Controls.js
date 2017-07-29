@@ -19,13 +19,44 @@ class Controls extends Component {
   {
     super();
     this.state = {
-      intensity: 50
+      intensity1: 10,
+      intensity2: 20,
+      intensity3: 30,
+      intensity4: 40,
+      intensity5: 50,
+      intensity6: 60
     };
   }
 
-  handleChange = (value) => {
+  handleChange1 = (value) => {
     this.setState({
-      intensity: value
+      intensity1: value
+    });
+  }
+  handleChange2 = (value) => {
+    this.setState({
+      intensity2: value
+    });
+  }
+
+  handleChange3 = (value) => {
+    this.setState({
+      intensity3: value
+    });
+  }
+  handleChange4 = (value) => {
+    this.setState({
+      intensity4: value
+    });
+  }
+  handleChange5 = (value) => {
+    this.setState({
+      intensity5: value
+    });
+  }
+  handleChange6 = (value) => {
+    this.setState({
+      intensity6: value
     });
   }
 
@@ -41,26 +72,34 @@ class Controls extends Component {
           <ul className="actions vertical">
             <li>
               Police Stations
-              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+              <Slider step={10} dots value={this.state.intensity1} onChange={this.handleChange1} />
             </li>
             <li>
               Parks
-              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+              <Slider step={10} dots value={this.state.intensity2} onChange={this.handleChange2} />
             </li>
             <li>
               Traffic
-              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+              <Slider step={10} dots value={this.state.intensity3} onChange={this.handleChange3} />
             </li>
             <li>
               Food
-              <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange} />
+              <Slider step={10} dots value={this.state.intensity4} onChange={this.handleChange4} />
+            </li>
+            <li>
+              Food
+              <Slider step={10} dots value={this.state.intensity5} onChange={this.handleChange5} />
+            </li>
+            <li>
+              Food
+              <Slider step={10} dots value={this.state.intensity6} onChange={this.handleChange6} />
             </li>
           </ul>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 
           <ul className="actions vertical">
-            <li><a href="#third" className="button">Learn More</a></li>
+            <li><a href="#third" className="button smooth-scroll-middle">Learn More</a></li>
           </ul>
 
 

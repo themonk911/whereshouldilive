@@ -11,7 +11,11 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
+<<<<<<< HEAD
     this.compute_intensity = this.compute_intensity.bind(this);    
+=======
+    this.onEachFeature = this.onEachFeature.bind(this);
+>>>>>>> e46b652d46ebf42466e73840f6a25228a9c53a81
   }
   compute_intensity(weight_array, intensity_array)
   {
@@ -26,8 +30,8 @@ class SimpleExample extends Component {
     }
     return sum;
   }
-  onEachFeature(feature, layer) {    
-    layer.bindTooltip(feature.properties.division_name);    
+  onEachFeature(feature, layer) {
+    layer.bindTooltip(feature.properties.division_name);
   }
  render() {
     return (
@@ -47,7 +51,7 @@ class SimpleExample extends Component {
                     points={summary}
                     longitudeExtractor={m => m[1]}
                     latitudeExtractor={m => m[2]}
-                    intensityExtractor={m => this.compute_intensity([m[3],m[4], m[5], m[6]], [1,2,3,4])*this.props.intensity + this.compute_intensity([m[3],m[4], m[5], m[6]], [1,2,3,4]) * this.props.intensity}
+                    intensityExtractor={m => this.compute_intensity([m[3],m[4], m[5], m[6]], [1,1,1,1])*this.props.intensity1 + this.compute_intensity([m[7],m[8], m[9], m[10]], [1,1,1,1]) * this.props.intensity2}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
@@ -59,7 +63,7 @@ class SimpleExample extends Component {
               onEachFeature={this.onEachFeature}
               >
              <GeoJSON data={boundary_json} />
-              </LayersControl.Overlay>          
+              </LayersControl.Overlay>
               </LayersControl>
           </Map>
         </div>
