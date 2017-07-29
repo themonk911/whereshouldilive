@@ -4,6 +4,7 @@ import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} fr
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import boundary_json from './data/ACT-Division-Boundaries.json'
 import {distance_to_police_departments} from './data/distance_to_police_departments.js'
+import {fitness_sites} from './data/fitness_sites.js'
 
 class SimpleExample extends Component {
 
@@ -18,7 +19,6 @@ class SimpleExample extends Component {
 
   }
   onEachFeature(feature, layer) {    
-    console.log("Here");
     layer.bindTooltip(feature.properties.division_name);    
   }
  render() {
@@ -33,13 +33,24 @@ class SimpleExample extends Component {
                 />
               </LayersControl.BaseLayer>
 
-              <LayersControl.Overlay name="Heatmap" checked>
+              <LayersControl.Overlay name="Distance to Police Heatmap" checked>
                 <FeatureGroup color="purple">                  
                   <HeatmapLayer
                     points={distance_to_police_departments}
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
-                    intensityExtractor={m => m[2]*this.props.intensity*100}
+                    intensityExtractor={m => m[2]*this.props.intensity}
+                  />
+                </FeatureGroup>
+              </LayersControl.Overlay>
+
+              <LayersControl.Overlay name="Fitness heatmap" checked>
+                <FeatureGroup color="purple">                  
+                  <HeatmapLayer
+                    points={fitness_sites}
+                    longitudeExtractor={m => m[0]}
+                    latitudeExtractor={m => m[1]}
+                    intensityExtractor={m => m[2]*this.props.intensity}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
