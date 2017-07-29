@@ -32,7 +32,7 @@ class Controls extends Component {
   render() {
     return (
       <div>
-      <section className="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+      <section className="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="second">
 
         <div className="content">
           <h2>Magna etiam feugiat</h2>
@@ -60,7 +60,7 @@ class Controls extends Component {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 
           <ul className="actions vertical">
-            <li><a href="#" className="button">Learn More</a></li>
+            <li><a href="#third" className="button">Learn More</a></li>
           </ul>
 
 
