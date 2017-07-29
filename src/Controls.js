@@ -9,6 +9,9 @@ class Controls extends Component {
     this.state = {
       intensity: 1
     };
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+
   }
 
   increment() {
