@@ -37,7 +37,8 @@ class SimpleExample extends Component {
                     points={addressPoints}
                     longitudeExtractor={m => m[1]}
                     latitudeExtractor={m => m[0]}
-                    intensityExtractor={m => parseFloat(m[2])}
+                    intensityExtractor={m => parseFloat(m[2])*this.props.intensity}
+
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
@@ -50,7 +51,7 @@ class SimpleExample extends Component {
                 <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
 
-              <LayersControl.Overlay name="Division Center"              
+              <LayersControl.Overlay name="Division Center"
               checked
               >
                 <GeoJSON data={division_json} />
