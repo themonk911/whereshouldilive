@@ -21,7 +21,7 @@ class Controls extends Component {
   {
     super();
     this.state = {
-      intensity: 1
+      intensity: 50
     };
   }
 
