@@ -102,13 +102,17 @@ class Controls extends Component {
             <li><a href="#third" className="button smooth-scroll-middle">Learn More</a></li>
           </ul>
 
-
         </div>
 
-
-
         <div className="image" alt="">
-          <SimpleExample intensity={this.state.intensity} />
+            <SimpleExample
+            intensity1={this.state.intensity1}
+            intensity2={this.state.intensity2}
+            intensity3={this.state.intensity3}
+            intensity4={this.state.intensity4}
+            intensity5={this.state.intensity5}
+            intensity6={this.state.intensity6}
+           />
         </div>
         </section>
 

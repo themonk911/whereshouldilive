@@ -11,11 +11,7 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
-<<<<<<< HEAD
     this.compute_intensity = this.compute_intensity.bind(this);    
-=======
-    this.onEachFeature = this.onEachFeature.bind(this);
->>>>>>> e46b652d46ebf42466e73840f6a25228a9c53a81
   }
   compute_intensity(weight_array, intensity_array)
   {
@@ -46,7 +42,7 @@ class SimpleExample extends Component {
               </LayersControl.BaseLayer>
 
               <LayersControl.Overlay name="Summary" checked>
-                <FeatureGroup color="purple">                  
+                <FeatureGroup color="purple">
                   <HeatmapLayer
                     points={summary}
                     longitudeExtractor={m => m[1]}
