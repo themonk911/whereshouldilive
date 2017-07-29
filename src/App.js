@@ -12,11 +12,20 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
-    this.onEachFeature = this.onEachFeature.bind(this);
+    this.onEachFeature = this.onEachFeature.bind(this);    
   }
-  compute_intensity()
+  compute_intensity(weight_array, intensity_array)
   {
-
+    if (weight_array.length !== intensity_array.length)
+    {
+      return false;
+    }
+    var sum = 0;
+    for (var i=0; i<weight_array.length; i++)
+    {
+      sum += weight_array[i] * intensity_array[i];
+    }
+    return sum;
   }
   onEachFeature(feature, layer) {    
     layer.bindTooltip(feature.properties.division_name);    
@@ -51,7 +60,8 @@ class SimpleExample extends Component {
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
                     intensityExtractor={m => m[2]*this.props.intensity}
-                  />
+                    radius={50}                    
+                  />                  
                 </FeatureGroup>
               </LayersControl.Overlay>
 
@@ -59,10 +69,9 @@ class SimpleExample extends Component {
               fitBoundsOnLoad
               fitBoundsOnUpdate
               checked              
-              onEachFeature={this.onEachFeature}
               >              
                 <GeoJSON data={boundary_json} />
-              </LayersControl.Overlay>
+              </LayersControl.Overlay>          
               </LayersControl>
           </Map>
         </div>
