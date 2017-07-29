@@ -35,7 +35,7 @@ class Controls extends Component {
     return (
       <div>
         <SimpleExample intensity={this.state.intensity} />
-        <Range value={this.state.value} onChange={this.handleChange}/>
+        <Slider value={this.state.intensity} onChange={this.handleChange}/>
         <div id='counter'>{this.state.intensity}</div>
 
         <ButtonToolbar>
