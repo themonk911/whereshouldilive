@@ -15,21 +15,6 @@ const Range = createSliderWithTooltip(Slider.Range);
 
 const Handle = Slider.Handle;
 
-// const handleSlider = (props) => {
-//   const { value, dragging, index, ...restProps } = props;
-//   return (
-//     <Tooltip
-//       prefixCls="rc-slider-tooltip"
-//       overlay={value}
-//       visible={dragging}
-//       placement="top"
-//       key={index}
-//     >
-//       <Handle value={value} {...restProps} />
-//     </Tooltip>
-//   );
-// };
-
 class Controls extends Component {
 
   constructor()
@@ -38,56 +23,13 @@ class Controls extends Component {
     this.state = {
       intensity: 1
     };
-    // this.increment = this.increment.bind(this);
-    // this.decrement = this.decrement.bind(this);
-    // this.handleSlider = this.handleSlider.bind(this);
   }
-
-  // increment() {
-  //     this.setState({
-  //       intensity : this.state.intensity + 1
-  //     });
-  // }
-  //
-  // decrement() {
-  //     this.setState({
-  //       intensity : this.state.intensity - 1
-  //     });
-  // }
-
-
-
-  // handleSlider(props) {
-  //   //const { value, dragging, index, ...restProps } = props;
-  //     this.setState({
-  //       intensity: props.value
-  //     });
-  //     console.log(props.value);
-  //     return (
-  //       <Tooltip
-  //         prefixCls="rc-slider-tooltip"
-  //         overlay={props.value}
-  //         visible={props.dragging}
-  //         placement="top"
-  //         key={props.index}
-  //       >
-  //         <Handle value={props.value} {...props.restProps} />
-  //       </Tooltip>
-  //     );
-  // }
-
-
-  // getColors() {
-  //     return "#00FF00";
-  // }
-//        <Slider min={0} max={20} defaultValue={3} handle={this.handleSlider} />
 
   handleChange = (value) => {
     this.setState({
       intensity: value
     });
   }
-
 
   render() {
     return (
