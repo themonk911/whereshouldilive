@@ -32,7 +32,7 @@ class Controls extends Component {
   render() {
     return (
       <div>
-      <section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+      <section className="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 
         <div className="content">
           <h2>Magna etiam feugiat</h2>
@@ -46,7 +46,7 @@ class Controls extends Component {
           <div id='counter'>{this.state.intensity}</div>
         </div>
 
-        <div className="image">
+        <div className="image" alt="">
           <SimpleExample intensity={this.state.intensity} />
         </div>
         </section>

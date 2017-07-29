@@ -17,14 +17,14 @@ class SimpleExample extends Component {
   {
 
   }
-  onEachFeature(feature, layer) {    
+  onEachFeature(feature, layer) {
     console.log("Here");
-    layer.bindTooltip(feature.properties.division_name);    
+    layer.bindTooltip(feature.properties.division_name);
   }
  render() {
     return (
     <div>
-      <Map center={this.position} zoom={11} >
+      <Map center={this.position} zoom={11.5} >
             <LayersControl>
               <LayersControl.BaseLayer name="Base" checked>
                 <TileLayer
@@ -34,7 +34,7 @@ class SimpleExample extends Component {
               </LayersControl.BaseLayer>
 
               <LayersControl.Overlay name="Heatmap" checked>
-                <FeatureGroup color="purple">                  
+                <FeatureGroup color="purple">
                   <HeatmapLayer
                     points={distance_to_police_departments}
                     longitudeExtractor={m => m[0]}
@@ -47,9 +47,9 @@ class SimpleExample extends Component {
               <LayersControl.Overlay name="Boundaries"
               fitBoundsOnLoad
               fitBoundsOnUpdate
-              checked              
+              checked
               onEachFeature={this.onEachFeature}
-              >              
+              >
                 <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
               </LayersControl>
