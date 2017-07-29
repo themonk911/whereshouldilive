@@ -2,9 +2,8 @@ import React, { Component }  from 'react'
 import { render } from 'react-dom'
 import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
-import { addressPoints } from './realworld.10000.js';
 import boundary_json from './data/ACT-Division-Boundaries.json'
-import division_json from './data/division_center.json'
+import {police_distance_json} from './data/distance_to_police_departments.js'
 
 class SimpleExample extends Component {
 
@@ -12,6 +11,15 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
+    this.onEachFeature = this.onEachFeature.bind(this);
+  }
+  compute_intensity()
+  {
+
+  }
+  onEachFeature(feature, layer) {    
+    console.log("Here");
+    layer.bindTooltip(feature.properties.division_name);    
   }
  render() {
     return (
@@ -33,12 +41,10 @@ class SimpleExample extends Component {
                     </Popup>
                   </Marker>
                   <HeatmapLayer
-
-                    points={addressPoints}
-                    longitudeExtractor={m => m[1]}
-                    latitudeExtractor={m => m[0]}
-                    intensityExtractor={m => parseFloat(m[2])*this.props.intensity}
-
+                    points={police_distance_json}
+                    longitudeExtractor={m => m[0]}
+                    latitudeExtractor={m => m[1]}
+                    intensityExtractor={m => m[2]*25000*this.props.intensity}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
@@ -46,18 +52,12 @@ class SimpleExample extends Component {
               <LayersControl.Overlay name="Boundaries"
               fitBoundsOnLoad
               fitBoundsOnUpdate
-              checked
-              >
+              checked              
+              onEachFeature={this.onEachFeature}
+              >              
                 <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
-
-              <LayersControl.Overlay name="Division Center"
-              checked
-              >
-                <GeoJSON data={division_json} />
-              </LayersControl.Overlay>
-
-            </LayersControl>
+              </LayersControl>
           </Map>
         </div>
     );
