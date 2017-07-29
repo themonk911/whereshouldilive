@@ -46,7 +46,7 @@ class Controls extends Component {
           <div id='counter'>{this.state.intensity}</div>
         </div>
 
-        <div className="image">
+        <div className="image" alt="">
           <SimpleExample intensity={this.state.intensity} />
         </div>
         </section>
