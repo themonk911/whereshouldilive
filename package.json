@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "json-loader": "^0.5.7",
     "leaflet": "^1.1.0",
     "rc-slider": "^8.3.0",
