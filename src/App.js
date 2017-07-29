@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import boundary_json from './data/ACT-Division-Boundaries.json'
-import {police_distance_json} from './data/distance_to_police_departments.js'
+import {distance_to_police_departments} from './data/distance_to_police_departments.js'
 
 class SimpleExample extends Component {
 
@@ -34,17 +34,12 @@ class SimpleExample extends Component {
               </LayersControl.BaseLayer>
 
               <LayersControl.Overlay name="Heatmap" checked>
-                <FeatureGroup color="purple">
-                  <Marker position={this.position} >
-                    <Popup>
-                      <span>A pretty CSS3 popup.<br /> Easily customizable. </span>
-                    </Popup>
-                  </Marker>
+                <FeatureGroup color="purple">                  
                   <HeatmapLayer
-                    points={police_distance_json}
+                    points={distance_to_police_departments}
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
-                    intensityExtractor={m => m[2]*this.props.intensity}
+                    intensityExtractor={m => m[2]*this.props.intensity*100}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
