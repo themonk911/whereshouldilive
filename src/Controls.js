@@ -32,11 +32,27 @@ class Controls extends Component {
   render() {
     return (
       <div>
-        <SimpleExample intensity={this.state.intensity} />
-        <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
-        <div id='counter'>{this.state.intensity}</div>
+        <div class="content">
+          <h2>Magna etiam feugiat</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+          <ul class="actions vertical">
+            <li><a href="#" class="button">Learn More</a></li>
+            <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
 
-    </div>
+          </ul>
+
+          <div id='counter'>{this.state.intensity}</div>
+        </div>
+
+        <div class="image">
+          <SimpleExample intensity={this.state.intensity} />
+        </div>
+</div>
+
+        // <SimpleExample intensity={this.state.intensity} />
+        // <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
+        // <div id='counter'>{this.state.intensity}</div>
+
     );
   }
 
