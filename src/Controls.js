@@ -2,8 +2,6 @@ import React, { Component }  from 'react'
 import { render } from 'react-dom'
 import SimpleExample from './App'
 
-import { Button, ButtonToolbar } from 'react-bootstrap';
-
 import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
 
@@ -38,10 +36,6 @@ class Controls extends Component {
         <Slider step={10} value={this.state.intensity} onChange={this.handleChange}/>
         <div id='counter'>{this.state.intensity}</div>
 
-        <ButtonToolbar>
-        <Button bsStyle="primary" bsSize="large" active>Primary button</Button>
-        <Button bsSize="large" active>Button</Button>
-        </ButtonToolbar>
     </div>
     );
   }
