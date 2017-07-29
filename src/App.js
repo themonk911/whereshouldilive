@@ -4,6 +4,7 @@ import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} fr
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import boundary_json from './data/ACT-Division-Boundaries.json'
 import {distance_to_police_departments} from './data/distance_to_police_departments.js'
+import {fitness_sites} from './data/fitness_sites.js'
 
 class SimpleExample extends Component {
 
@@ -11,15 +12,23 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
-    this.onEachFeature = this.onEachFeature.bind(this);
+    this.onEachFeature = this.onEachFeature.bind(this);    
   }
-  compute_intensity()
+  compute_intensity(weight_array, intensity_array)
   {
-
+    if (weight_array.length !== intensity_array.length)
+    {
+      return false;
+    }
+    var sum = 0;
+    for (var i=0; i<weight_array.length; i++)
+    {
+      sum += weight_array[i] * intensity_array[i];
+    }
+    return sum;
   }
-  onEachFeature(feature, layer) {
-    console.log("Here");
-    layer.bindTooltip(feature.properties.division_name);
+  onEachFeature(feature, layer) {    
+    layer.bindTooltip(feature.properties.division_name);    
   }
  render() {
     return (
@@ -33,14 +42,26 @@ class SimpleExample extends Component {
                 />
               </LayersControl.BaseLayer>
 
-              <LayersControl.Overlay name="Heatmap" checked>
-                <FeatureGroup color="purple">
+              <LayersControl.Overlay name="Distance to Police Heatmap" checked>
+                <FeatureGroup color="purple">                  
                   <HeatmapLayer
                     points={distance_to_police_departments}
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
-                    intensityExtractor={m => m[2]*this.props.intensity*100}
+                    intensityExtractor={m => m[2]*this.props.intensity}
                   />
+                </FeatureGroup>
+              </LayersControl.Overlay>
+
+              <LayersControl.Overlay name="Fitness heatmap" checked>
+                <FeatureGroup color="purple">                  
+                  <HeatmapLayer
+                    points={fitness_sites}
+                    longitudeExtractor={m => m[0]}
+                    latitudeExtractor={m => m[1]}
+                    intensityExtractor={m => m[2]*this.props.intensity}
+                    radius={50}                    
+                  />                  
                 </FeatureGroup>
               </LayersControl.Overlay>
 
@@ -50,8 +71,8 @@ class SimpleExample extends Component {
               checked
               onEachFeature={this.onEachFeature}
               >
-                <GeoJSON data={boundary_json} />
-              </LayersControl.Overlay>
+             <GeoJSON data={boundary_json} />
+              </LayersControl.Overlay>          
               </LayersControl>
           </Map>
         </div>
