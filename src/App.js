@@ -4,6 +4,7 @@ import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} fr
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import { addressPoints } from './realworld.10000.js';
 import boundary_json from './data/ACT-Division-Boundaries.json'
+import division_json from './data/division_center.json'
 
 class SimpleExample extends Component {
 
@@ -47,6 +48,12 @@ class SimpleExample extends Component {
               checked
               >
                 <GeoJSON data={boundary_json} />
+              </LayersControl.Overlay>
+
+              <LayersControl.Overlay name="Division Center"              
+              checked
+              >
+                <GeoJSON data={division_json} />
               </LayersControl.Overlay>
 
             </LayersControl>
