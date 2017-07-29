@@ -1,19 +1,21 @@
 import React, { Component }  from 'react'
 import { render } from 'react-dom'
-import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup} from 'react-leaflet'
+import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import { addressPoints } from './realworld.10000.js';
+import boundary_json from './data/ACT-Division-Boundaries.json'
 
 class SimpleExample extends Component {
   
   constructor()
   {
     super();
-    this.position =    [50.05, -0.09];  
+    this.position =    [-35.325, 149.09];                  
   }
  render() {
-    return (      
-      <Map center={this.position} zoom={13} >
+    return (   
+    <div>   
+      <Map center={this.position} zoom={11} >
             <LayersControl>
               <LayersControl.BaseLayer name="Base" checked>
                 <TileLayer
@@ -38,17 +40,14 @@ class SimpleExample extends Component {
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
-              <LayersControl.Overlay name="Marker" checked>
-                <FeatureGroup color="purple">
-                  <Marker position={this.position} >
-                    <Popup>
-                      <span>A pretty CSS3 popup.<br /> Easily customizable. </span>
-                    </Popup>
-                  </Marker>
-                </FeatureGroup>
+              <LayersControl.Overlay name="Boundaries" checked>
+
+                <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
+             
             </LayersControl>
           </Map>
+        </div>
     );
   }
 
