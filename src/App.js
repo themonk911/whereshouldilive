@@ -12,7 +12,7 @@ class SimpleExample extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
-    this.onEachFeature = this.onEachFeature.bind(this);    
+    this.onEachFeature = this.onEachFeature.bind(this);
   }
   compute_intensity(weight_array, intensity_array)
   {
@@ -27,8 +27,8 @@ class SimpleExample extends Component {
     }
     return sum;
   }
-  onEachFeature(feature, layer) {    
-    layer.bindTooltip(feature.properties.division_name);    
+  onEachFeature(feature, layer) {
+    layer.bindTooltip(feature.properties.division_name);
   }
  render() {
     return (
@@ -43,7 +43,7 @@ class SimpleExample extends Component {
               </LayersControl.BaseLayer>
 
               <LayersControl.Overlay name="Distance to Police Heatmap" checked>
-                <FeatureGroup color="purple">                  
+                <FeatureGroup color="purple">
                   <HeatmapLayer
                     points={distance_to_police_departments}
                     longitudeExtractor={m => m[0]}
@@ -54,14 +54,14 @@ class SimpleExample extends Component {
               </LayersControl.Overlay>
 
               <LayersControl.Overlay name="Fitness heatmap" checked>
-                <FeatureGroup color="purple">                  
+                <FeatureGroup color="purple">
                   <HeatmapLayer
                     points={fitness_sites}
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
-                    intensityExtractor={m => m[2]*this.props.intensity}
-                    radius={50}                    
-                  />                  
+                    intensityExtractor={m => m[2]*this.props.intensity1*this.props.intensity2*this.props.intensity3*this.props.intensity4*this.props.intensity5*this.props.intensity6/6}
+                    radius={50}
+                  />
                 </FeatureGroup>
               </LayersControl.Overlay>
 
@@ -72,7 +72,7 @@ class SimpleExample extends Component {
               onEachFeature={this.onEachFeature}
               >
              <GeoJSON data={boundary_json} />
-              </LayersControl.Overlay>          
+              </LayersControl.Overlay>
               </LayersControl>
           </Map>
         </div>
