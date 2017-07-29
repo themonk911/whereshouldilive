@@ -44,7 +44,7 @@ class SimpleExample extends Component {
                     points={police_distance_json}
                     longitudeExtractor={m => m[0]}
                     latitudeExtractor={m => m[1]}
-                    intensityExtractor={m => m[2]*25000*this.props.intensity}
+                    intensityExtractor={m => m[2]*this.props.intensity}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>

@@ -2,6 +2,19 @@ import React, { Component }  from 'react'
 import { render } from 'react-dom'
 import SimpleExample from './App'
 
+import { Button, ButtonToolbar } from 'react-bootstrap';
+
+import 'rc-slider/assets/index.css';
+import 'rc-tooltip/assets/bootstrap.css';
+
+import Tooltip from 'rc-tooltip';
+import Slider from 'rc-slider';
+
+const createSliderWithTooltip = Slider.createSliderWithTooltip;
+const Range = createSliderWithTooltip(Slider.Range);
+
+const Handle = Slider.Handle;
+
 class Controls extends Component {
 
   constructor()
@@ -10,30 +23,25 @@ class Controls extends Component {
     this.state = {
       intensity: 1
     };
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-
   }
 
-  increment() {
-      this.setState({
-        intensity : this.state.intensity + 1
-      });
-  }
-
-  decrement() {
-      this.setState({
-        intensity : this.state.intensity - 1
-      });
+  handleChange = (value) => {
+    this.setState({
+      intensity: value
+    });
   }
 
   render() {
     return (
       <div>
         <SimpleExample intensity={this.state.intensity} />
+        <Range value={this.state.value} onChange={this.handleChange}/>
         <div id='counter'>{this.state.intensity}</div>
-        <button onClick = {this.increment}> Add 1 </button>
-        <button onClick = {this.decrement}> Minus 1 </button>
+
+        <ButtonToolbar>
+        <Button bsStyle="primary" bsSize="large" active>Primary button</Button>
+        <Button bsSize="large" active>Button</Button>
+        </ButtonToolbar>
     </div>
     );
   }
