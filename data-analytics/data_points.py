@@ -77,6 +77,29 @@ class DataPoints:
             for suburb in self.suburb_grid:
                 grid_file.write(suburb + ", " + str(self.suburb_grid[suburb]) + "\n")
 
+    def get_number_of_bus_stops_per_suburb(self, array_of_bus_stops):
+        bus_stops_per_suburb = dict()
+
+        for bus_stop in array_of_bus_stops:
+            for suburb in self.suburb_polygons:
+                # print bus_stop
+                try:
+                    point = Point(float(bus_stop[0]), float(bus_stop[1]))
+                except:
+                    continue
+
+                if Polygon(self.suburb_polygons[suburb]).contains(point):
+                    # print suburb, point
+                    if suburb in bus_stops_per_suburb:
+                        bus_stops_per_suburb[suburb] = bus_stops_per_suburb[suburb] + 1
+                        # self.bus_stops_per_suburb[suburb].append([bus_stop[0], bus_stop[1]])
+                    else:
+                        bus_stops_per_suburb[suburb] = 1
+                        # self.bus_stops_per_suburb[suburb] = [[bus_stop[0], bus_stop[1]]]
+
+        return bus_stops_per_suburb
+
+
     def execute(self):
         self.load_data()
         self.generate_suburb_grid()

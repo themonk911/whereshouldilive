@@ -3,6 +3,8 @@ import sys
 from geopy.distance import great_circle
 import numpy as np
 
+from data_points import DataPoints
+
 class DatasetPreprocessing:
     def __init__(self):
         self.raw_data_folder = "../datasets"
@@ -23,6 +25,7 @@ class DatasetPreprocessing:
         self.in_playgrounds = "Town_And_District_Playgrounds.csv"
         self.in_dog_parks = "Fenced_Dog_Parks.csv"
         self.in_crime_stats = "ACT_CrimeStats_-_Jan2012_to_Mar2017"
+        self.in_bus_data = "Bus_Stops_July_2017.csv"
 
         self.out_act_police_stations_locations = "safety_distance_to_police_stations.data"
         self.out_act_hospital_locations = "health_distance_to_hospitals.data"
@@ -37,6 +40,7 @@ class DatasetPreprocessing:
         self.out_playgrounds = "green_spaces_distance_to_playgrounds.data"
         self.out_dog_parks = "green_spaces_distance_to_fenced_dog_parks.data"
         self.out_crime_stats = "safety_crime_stats_last_2.5_years.data"
+        self.out_bus_data = "transport_bus_stops.data"
 
     def write_collection_of_points_to_file(self, points, file):
         with open(file, 'w+') as output_file:
@@ -355,6 +359,51 @@ class DatasetPreprocessing:
             True
         )
 
+    def process_bus_data(self, division_centers):
+        dp = DataPoints()
+        dp.load_data()
+        bus_stop_coordinates = []
+
+        with open(self.raw_data_folder + '/' + self.in_bus_data, 'r') as input:
+            points = []
+            lines = input.readlines()
+            for index, line in enumerate(lines):
+                if index == 0:
+                    continue
+
+                stripped_line = line.strip()
+                coordinates = stripped_line[stripped_line.find(",POINT (") + 8:stripped_line.find(")")]
+                coordinatesar = coordinates.split(" ")
+                # print(coordinatesar)
+                bus_stop_coordinates.append(coordinatesar)
+
+        dict_bus_stops_per_suburb = dp.get_number_of_bus_stops_per_suburb(bus_stop_coordinates)
+        maxi = max(dict_bus_stops_per_suburb.values())
+        mini = min(dict_bus_stops_per_suburb.values())
+
+        with open(self.output_folder + '/' + self.out_bus_data, 'w') as output_file:
+            for key in dict_bus_stops_per_suburb:
+                cnt_bus_stops = (float(dict_bus_stops_per_suburb[key] - mini) / float(maxi - mini)) * float(100.0)
+                if key.upper() in division_centers:
+                    center = division_centers[key.upper()]
+                    output_file.write('[{},{},{},{}]\n'.format(key.upper(), center[0], center[1], cnt_bus_stops))
+                else:
+                    print("Not there: " + key.uspper())
+                    pass
+
+
+
+
+        #         point = stripped_line[stripped_line.rfind(',"(') + 3:stripped_line.rfind(')"')].split(', ')[::-1]
+        #         points.append(point)
+        #
+        # self.print_distance_from_points_to_district_center(
+        #     points,
+        #     division_centers,
+        #     self.output_folder + '/' + self.out_bus_data,
+        #     True
+        # )
+
     def process_crime_stats(self, division_centers):
         print(division_centers)
         sum_of_all_crimes_2_5_years = dict()
@@ -397,19 +446,20 @@ class DatasetPreprocessing:
 
     def execute(self):
         division_centers = self.process_act_division_boundaries()
-        self.process_police_stations_locations(division_centers)
-        self.process_hospital_locations(division_centers)
-        self.process_fitness_sites(division_centers)
-        self.process_public_toilets(division_centers)
-        self.process_cyclist_crashes(division_centers)
-        self.process_tafe_campus_locations(division_centers)
-        self.process_library_locations(division_centers)
-        self.process_arts_facilities(division_centers)
-        self.process_bbq(division_centers)
-        self.process_public_furniture(division_centers)
-        self.process_playgrounds(division_centers)
-        self.process_fenced_dog_park(division_centers)
-        self.process_crime_stats(division_centers)
+        # self.process_police_stations_locations(division_centers)
+        # self.process_hospital_locations(division_centers)
+        # self.process_fitness_sites(division_centers)
+        # self.process_public_toilets(division_centers)
+        # self.process_cyclist_crashes(division_centers)
+        # self.process_tafe_campus_locations(division_centers)
+        # self.process_library_locations(division_centers)
+        # self.process_arts_facilities(division_centers)
+        # self.process_bbq(division_centers)
+        # self.process_public_furniture(division_centers)
+        # self.process_playgrounds(division_centers)
+        # self.process_fenced_dog_park(division_centers)
+        # self.process_crime_stats(division_centers)
+        self.process_bus_data(division_centers)
 
 if __name__ == "__main__":
     preproc = DatasetPreprocessing()
