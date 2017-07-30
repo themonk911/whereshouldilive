@@ -68,7 +68,6 @@ class Collect:
                                 float(split_line[1]),
                                 float(split_line[2])
                             ]
-                            first_time_header = False
 
                         if key in overall_value_category:
                             overall_value_category[key].append(
