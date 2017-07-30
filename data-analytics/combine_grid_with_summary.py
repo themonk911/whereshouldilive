@@ -25,8 +25,6 @@ def write_suburbs(suburbs, file_name, comment, variable):
 
 suburbs = {}
 
-names = set()
-
 for line in grid_data:	
 	first_comma = line.find(",")
 	name = line[:first_comma]
@@ -34,7 +32,6 @@ for line in grid_data:
 	array = ast.literal_eval(array)		
 	suburbs[name] = {}
 	suburbs[name]['points'] = array	
-	names.add(name)
 
 
 
