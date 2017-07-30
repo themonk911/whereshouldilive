@@ -1,60 +1,101 @@
-import os
 import sys
 
 class Collect:
     def __init__(self):
-        self.folder = "/home/fpoppa/workspace/whereshouldilive/src/data"
-        self.data = dict()
-        self.header = []
+        self.headers = []
+
+        self.input_folder = "../src/data"
+        self.input_weighting = {
+            'education': {
+                 'education_distance_to_art_facilities.data': 1.0,
+                 'education_distance_to_libraries.data': 1.0,
+                 'education_distance_to_tafe_campuses.data': 1.0
+            },
+            'green_spaces': {
+                'green_spaces_distance_to_bbqs.data': 1.0,
+                'green_spaces_distance_to_fenced_dog_parks.data': 1.0,
+                'green_spaces_distance_to_playgrounds.data': 1.0,
+                'green_spaces_distance_to_public_furniture.data': 1.0
+            },
+            'safety': {
+                'safety_distance_to_police_stations.data': 1.0,
+                'safety_distance_to_public_toilets.data': 1.0
+            },
+            # 'housing': {
+            #
+            # },
+            'transport': {
+                'transport_cyclist_crashes.data': 1.0
+            },
+            'health': {
+                'health_distance_to_fitness_sites.data': 1.0,
+                'health_distance_to_hospitals.data': 1.0
+            }
+        }
+
+        self.output_summary_of_all_data = dict()
 
     def execute(self):
-        index = 0
-        for file_name in sorted(os.listdir(self.folder)):
-            with open(self.folder + '/' + file_name, 'r') as file:
-                if file_name.endswith(".data"):
-                    if index == 0:
-                        self.header.append('district')
-                        self.header.append('lon')
-                        self.header.append('lat')
-                        self.header.append(file_name[0:len(file_name)-3])
-                    else:
-                        self.header.append(file_name[0:len(file_name)-3])
+        first_time_header = True
+
+        for category in self.input_weighting:
+            print("category: " + category)
+            overall_value_category = dict()
+            number_of_values_in_category = 0
+            # index = 0
+
+            if first_time_header:
+                self.headers.append('district')
+                self.headers.append('lon')
+                self.headers.append('lat')
+                print("Header: district, lat, lon")
+            self.headers.append(category)
+            print("Header: " + category)
+
+            for file_name in self.input_weighting[category]:
+                with open(self.input_folder + '/' + file_name, 'r') as file:
+                    print("   Processing file " + file_name)
+                    number_of_values_in_category += 1
 
                     for line in file.readlines():
-                        sline = line.strip()
-                        tmp1=sline.find('[')+1
-                        tmp2=sline.find(']')
-                        split_line = sline[tmp1:tmp2].split(',')
+                        stripped_line = line.strip()
+                        split_line = stripped_line[stripped_line.find('[')+1:stripped_line.find(']')].split(',')
                         key = str(split_line[0])
-                        if index == 0:
-                            # print(str(split_line[0:2]))
-                            self.data[key] = [
+                        print("      Key: " + key)
+
+                        if first_time_header:
+                            self.output_summary_of_all_data[key] = [
                                 float(split_line[1]),
-                                float(split_line[2]),
-                                float(split_line[3])
+                                float(split_line[2])
                             ]
+                            first_time_header = False
 
-                            # sys.exit(1)
-                            # print(self.data[key])
+                        if key in overall_value_category:
+                            overall_value_category[key].append(
+                                self.input_weighting[category][file_name] * float(split_line[3])
+                            )
+                            # print('2')
                         else:
-                            if key in self.data:
-                                value = self.data[key]
-                                value2 = split_line[3]
-                                # value3 = value.append(value2)
-                                self.data[key].append(float(value2))
+                            overall_value_category[key] = \
+                                [self.input_weighting[category][file_name] * float(split_line[3])]
 
-                            else:
-                                print("Key not used yet: " + key)
+            first_time_header = False
 
-                    index = index + 1
+            for key in overall_value_category:
+                if key in self.output_summary_of_all_data:
+                    self.output_summary_of_all_data[key].append(
+                        sum(overall_value_category[key]) / number_of_values_in_category
+                    )
+                else:
+                    self.output_summary_of_all_data[key] = [sum(overall_value_category[key]) / number_of_values_in_category]
 
-        with open("/home/fpoppa/workspace/whereshouldilive/src/data/summary_of_all_data.js", 'w') as result_file:
-            sheader = str(self.header)
+        with open(self.input_folder + '/' + "summary_of_all_data.js", 'w') as result_file:
+            sheader = str(self.headers)
             result_file.write("//" + sheader[1:len(sheader)-1] + "\n")
 
             result_file.write("export const summary = [")
-            for key in self.data:
-                sdata = str(self.data[key])
+            for key in self.output_summary_of_all_data:
+                sdata = str(self.output_summary_of_all_data[key])
                 result_file.write('["' + str(key) + '", ' + sdata[1:len(sdata)-1] + "],\n")
             result_file.write("]")
 

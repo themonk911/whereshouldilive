@@ -5,8 +5,8 @@ import numpy as np
 
 class DatasetPreprocessing:
     def __init__(self):
-        self.raw_data_folder = "/home/fpoppa/Downloads/datasets/raw_in"
-        self.output_folder = "/home/fpoppa/workspace/whereshouldilive/src/data"
+        self.raw_data_folder = "../datasets"
+        self.output_folder = "../src/data"
 
         self.in_act_division_boundaries = "ACT_Division_Boundaries_data.csv"
 
@@ -23,18 +23,18 @@ class DatasetPreprocessing:
         self.in_playgrounds = "Town_And_District_Playgrounds.csv"
         self.in_dog_parks = "Fenced_Dog_Parks.csv"
 
-        self.out_act_police_stations_locations = "safety_distance_to_police_stations.csv"
-        self.out_act_hospital_locations = "health_distance_to_hospitals.csv"
-        self.out_act_public_toilets = "safety_distance_to_public_toilets.csv"
-        self.out_act_fitness_sites = "health_distance_to_fitness_sites.csv"
-        self.out_act_cyclist_crashes = "transport_cyclist_crashes.csv"
-        self.out_tafe_campus_locations = "ACT_TAFE_Campus_Locations.csv"
-        self.out_library_locations = "Library_Locations.csv"
-        self.out_arts_facilities = "ACT_Arts_Facilities_List.csv"
-        self.out_bbq = "Public_Barbeques_in_the_ACT.csv"
-        self.out_public_furniture = "Public_Furniture_in_the_ACT.csv"
-        self.out_playgrounds = "Town_And_District_Playgrounds.csv"
-        self.out_dog_parks = "Fenced_Dog_Parks.csv"
+        self.out_act_police_stations_locations = "safety_distance_to_police_stations.data"
+        self.out_act_hospital_locations = "health_distance_to_hospitals.data"
+        self.out_act_public_toilets = "safety_distance_to_public_toilets.data"
+        self.out_act_fitness_sites = "health_distance_to_fitness_sites.data"
+        self.out_act_cyclist_crashes = "transport_cyclist_crashes.data"
+        self.out_tafe_campus_locations = "education_distance_to_tafe_campuses.data"
+        self.out_library_locations = "education_distance_to_libraries.data"
+        self.out_arts_facilities = "education_distance_to_art_facilities.data"
+        self.out_bbq = "green_spaces_distance_to_bbqs.data"
+        self.out_public_furniture = "green_spaces_distance_to_public_furniture.data"
+        self.out_playgrounds = "green_spaces_distance_to_playgrounds.data"
+        self.out_dog_parks = "green_spaces_distance_to_fenced_dog_parks.data"
 
     def write_collection_of_points_to_file(self, points, file):
         with open(file, 'w+') as output_file:
@@ -70,21 +70,14 @@ class DatasetPreprocessing:
             max_dist = max(np_points_to_write[:,3])
 
             # file.write("export const " + variable + " = [")
-            for index2,point in enumerate(points_to_write):
-                if index2 != len(points_to_write)-1:
-                    file.write("[{},{},{},{}],\n".format(
-                        point[0],
-                        point[1],
-                        point[2],
-                        self.normalize(float(min_dist), float(max_dist), float(point[3]), invert))
-                    )
-                else:
-                    file.write("[{},{},{},{}]\n".format(
-                        point[0],
-                        point[1],
-                        point[2],
-                        self.normalize(float(min_dist), float(max_dist), float(point[3]), invert))
-                    )
+            for point in points_to_write:
+
+                file.write("[{},{},{},{}]\n".format(
+                    point[0],
+                    point[1],
+                    point[2],
+                    self.normalize(float(min_dist), float(max_dist), float(point[3]), invert))
+                )
             # file.write("]")
 
     def normalize(self, min, max, current, invert=False):
@@ -147,7 +140,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/distance_to_police_departments.data",
+            self.output_folder + '/' + self.out_act_police_stations_locations,
             True
         )
 
@@ -169,7 +162,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/distance_to_hospitals.data",
+            self.output_folder + '/' + self.out_act_hospital_locations,
             True
         )
 
@@ -187,7 +180,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/public_toilets.data",
+            self.output_folder + '/' + self.out_act_public_toilets,
             False
         )
 
@@ -205,7 +198,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/fitness_sites.data",
+            self.output_folder + '/' + self.out_act_fitness_sites,
             True
         )
 
@@ -223,7 +216,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/cyclist_crashes.data",
+            self.output_folder + '/' + self.out_act_cyclist_crashes,
             False
         )
 
@@ -242,7 +235,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/tafe_campus_locations.data",
+            self.output_folder + '/' + self.out_tafe_campus_locations,
             True
         )
 
@@ -261,7 +254,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/library_locations.data",
+            self.output_folder + '/' + self.out_library_locations,
             True
         )
 
@@ -280,7 +273,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/arts_facilities.data",
+            self.output_folder + '/' + self.out_arts_facilities,
             True
         )
 
@@ -299,7 +292,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/bbq.data",
+            self.output_folder + '/' + self.out_bbq,
             True
         )
 
@@ -318,7 +311,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/public_furniture.data",
+            self.output_folder + '/' + self.out_public_furniture,
             True
         )
 
@@ -337,7 +330,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/playgrounds.data",
+            self.output_folder + '/' + self.out_playgrounds,
             True
         )
 
@@ -356,7 +349,7 @@ class DatasetPreprocessing:
         self.print_distance_from_points_to_district_center(
             points,
             division_centers,
-            self.output_folder + "/dog_parks.data",
+            self.output_folder + '/' + self.out_dog_parks,
             True
         )
 
