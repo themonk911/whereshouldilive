@@ -42,15 +42,12 @@ class Collect:
             print("category: " + category)
             overall_value_category = dict()
             number_of_values_in_category = 0
-            # index = 0
 
             if first_time_header:
                 self.headers.append('district')
                 self.headers.append('lon')
                 self.headers.append('lat')
-                print("Header: district, lat, lon")
             self.headers.append(category)
-            print("Header: " + category)
 
             for file_name in self.input_weighting[category]:
                 with open(self.input_folder + '/' + file_name, 'r') as file:
@@ -73,7 +70,6 @@ class Collect:
                             overall_value_category[key].append(
                                 self.input_weighting[category][file_name] * float(split_line[3])
                             )
-                            # print('2')
                         else:
                             overall_value_category[key] = \
                                 [self.input_weighting[category][file_name] * float(split_line[3])]
