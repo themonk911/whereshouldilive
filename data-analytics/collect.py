@@ -26,7 +26,8 @@ class Collect:
                 'weekly_rental_prices.data': 1.0
             },
             'transport': {
-                'transport_cyclist_crashes.data': 1.0
+                'transport_cyclist_crashes.data': 0.2,
+                'transport_bus_stops.data': 0.8
             },
             'health': {
                 'health_distance_to_fitness_sites.data': 0.2,
