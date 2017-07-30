@@ -42,7 +42,7 @@ class DataConnector extends Component {
               </LayersControl.BaseLayer>
 
               <LayersControl.Overlay name="Summary" checked>
-                <FeatureGroup color="purple">
+                <FeatureGroup color="red">
                   <HeatmapLayer
                     points={summary}
                     radius={1000}
@@ -50,8 +50,8 @@ class DataConnector extends Component {
                     longitudeExtractor={m => m[1]}
                     latitudeExtractor={m => m[2]}
                     intensityExtractor={m => this.compute_intensity(
-                      [m[3], m[4], m[5], m[6], m[7]],
-                      [this.props.health_intensity, this.props.education_intensity, this.props.safety_intensity, this.props.nature_intensity, this.props.transport_intensity]
+                      [m[3], m[4], m[5], m[6], m[7], m[8]],
+                      [this.props.education_intensity, this.props.nature_intensity, this.props.health_intensity, this.props.housing_intensity, this.props.safety_intensity, this.props.transport_intensity]
                       )}
                   />
                 </FeatureGroup>

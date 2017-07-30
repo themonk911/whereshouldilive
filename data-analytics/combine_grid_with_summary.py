@@ -42,9 +42,7 @@ for line in summary_data[2:]:
 		split_array = line.split(",")
 		name = split_array[0][1:-1] # ignore ""
 		heats = map(float, split_array[3:-1])
-		if (name != ''):			
-			if name not in names:
-				print (name)
+		if (name != ''):						
 			suburbs[name]['heats'] = heats			
 
 		
