@@ -6,7 +6,7 @@ When you're moving house, deciding where to move to can be tricky. Researching i
 
 'Where Should I Live' uses data from Data ACT and the 2016 Australian Census. We've combined multiple data sources along with our custom weighting of their importance for each category.
 
-Try the [live demo](http://whereshouldilive.space) or host it yourself with the installation steps below.
+Try the [live site](http://whereshouldilive.space) or host it yourself with the installation steps below.
 
 ## Installation
 
