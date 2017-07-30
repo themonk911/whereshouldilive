@@ -24,7 +24,7 @@ class DataConnector extends Component {
     {
       sum += weight_array[i] * intensity_array[i];
     }
-    return sum/weight_array.length;
+    return sum/2;
   }
   onEachFeature(feature, layer) {
     layer.bindTooltip(feature.properties.division_name);
