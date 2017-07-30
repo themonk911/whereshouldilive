@@ -2,13 +2,12 @@
 
 import csv
 import sys
+from common_functions import ProcessSSCData
 
-sqlite_file = 'dbfile'
-
-income_csv="2016Census_G36_ACT_SSC.csv"
+rent_csv="../datasets/2016Census_G36_ACT_SSC.csv"
 
 # Read header
-with open(income_csv,'rb') as f:
+with open(rent_csv,'rb') as f:
     reader = csv.reader(f)
     header = next(reader)
     
@@ -37,37 +36,59 @@ for col in header:
     i = i + 1
 
 suburbs = []
-with open(income_csv,'rb') as f:
+ssc_obj = ProcessSSCData()
+with open(rent_csv,'rb') as f:
+
     reader = csv.reader(f)
     for i,row in enumerate(reader):
         if (i == 0): continue
         ssc = row[0]
 
         suburb = {}
-        suburb["ssc"] = str(ssc.replace("SSC", ""))
+        code = int(ssc.replace("SSC", ""))
+        name = ssc_obj.convert_ssc_to_suburb_name(code)
+        if (name == False):
+            continue
+
+        suburb["ssc"] = code
+        suburb["name"] = name
         
         suburb_sum = 0
-        suburb_brac_count = 0
+        total_num_persons = 0
         for b in brackets:
             col_idx = b["col_idx"]
             num_person = int(row[col_idx])
             if num_person > 0:
-                average_bracket = (b["upper"] + b["lower"]) / num_person
-                suburb_brac_count = suburb_brac_count + 1
-
+                average_bracket = num_person*(b["upper"] + b["lower"]) / 2
                 suburb_sum = suburb_sum + average_bracket
+                total_num_persons += num_person
             else:
                 average = 0
 
-        if suburb_brac_count > 0:
-            suburb_average = suburb_sum / suburb_brac_count
+        if total_num_persons > 0:
+            suburb_average = suburb_sum / total_num_persons
             suburb["average"] = suburb_average
         else:
             suburb["average"] = 0
-       
+        
         suburbs.append(suburb)
 
-        
+def write_suburbs_to_data (suburbs, outfile):    
+    minn = 0
+    maxx = 0
+    for suburb in suburbs:
+        num = suburb["average"]
+        if (num <= minn):
+            minn = num
+        if (num >= maxx):
+            maxx = num
+
+    with open(outfile, "w") as f:
+        for suburb in suburbs:
+            normalised_average = 100.0 - (float(suburb["average"])-float(minn))/float(maxx - minn)*100
+            #print ("[{}, 0, 0, {}]".format(suburb["name"], normalised_average))
+            f.write("[{},0,0,{}]\n".format(suburb["name"], normalised_average))
 
 
 
+write_suburbs_to_data(suburbs, sys.argv[1])

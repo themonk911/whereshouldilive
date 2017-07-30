@@ -89,7 +89,7 @@ class Controls extends Component {
               <Slider step={10} dots value={this.state.health_intensity} onChange={this.handleChange4} />
             </li>
             <li>
-              Housing
+              Housing Affordability
               <Slider step={10} dots value={this.state.housing_intensity} onChange={this.handleChange5} />
             </li>
             <li>

@@ -22,9 +22,9 @@ class Collect:
                 'safety_distance_to_public_toilets.data': 0.2,
                 'safety_crime_stats_last_2.5_years.data': 0.4
             },
-            # 'housing': {
-            #
-            # },
+            'housing': {
+                'weekly_rental_prices.data': 1.0
+            },
             'transport': {
                 'transport_cyclist_crashes.data': 1.0
             },
@@ -39,7 +39,7 @@ class Collect:
     def execute(self):
         first_time_header = True
 
-        for category in self.input_weighting:
+        for category in sorted(self.input_weighting):
             print("category: " + category)
             overall_value_category = dict()
             number_of_values_in_category = 0
