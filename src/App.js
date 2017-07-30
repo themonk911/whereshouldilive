@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Map, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON} from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import boundary_json from './data/ACT-Division-Boundaries.json'
-import {summary} from './data/summary_of_all_data.js'
+import {summary} from './data/expanded_summary.js'
 
 class DataConnector extends Component {
 
