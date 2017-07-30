@@ -21,5 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
-datasets/
 data-analytics/.idea/
+docs/dataset_overview.docx
+docs/.~lock.*

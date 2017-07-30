@@ -57,12 +57,12 @@
                   <p> Nature includes parks, BBQ areas, sports grounds </p>
                 </section>
                 <section>
-                  <span class="icon style2 major fa-wifi"></span>
+                  <span class="icon style2 major fa-bar-chart"></span>
                   <h3>Health</h3>
                   <p> Health takes into account </p>
                 </section>
                 <section>
-                  <span class="icon style2 major fa-cog"></span>
+                  <span class="icon style2 major fa-bar-chart"></span>
                   <h3>Housing</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
                 </section>
@@ -71,37 +71,6 @@
                   <h3>Transport</h3>
                   <p> Accessibility to public transport and taking into account high cyclist accidents</p>
                 </section>
-
-                <!-- <section>
-                  <span class="icon style2 major fa-desktop"></span>
-                  <h3>Aliquam</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-refresh"></span>
-                  <h3>Elit</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-hashtag"></span>
-                  <h3>Morbi</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-bolt"></span>
-                  <h3>Turpis</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-envelope"></span>
-                  <h3>Ultrices</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-leaf"></span>
-                  <h3>Risus</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-                </section> -->
               </div>
             </div>
             <ul class="actions vertical">
@@ -139,14 +108,14 @@
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
-							<form method="post" action="#">
+							 <form id="contactform" method="POST">
 								<div class="field half first">
 									<label for="name">Name</label>
 									<input type="text" name="name" id="name" value="" />
 								</div>
 								<div class="field half">
 									<label for="email">Email</label>
-									<input type="email" name="email" id="email" value="" />
+									<input type="email" name="_replyto" id="email" value="" />
 								</div>
 								<div class="field">
 									<label for="message">Message</label>
@@ -155,7 +124,12 @@
 								<ul class="actions">
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
+                <input type="text" name="_gotcha" style="display:none" />
 							</form>
+              <script>
+              var contactform =  document.getElementById('contactform');
+              contactform.setAttribute('action', 'http://formspree.io/' + 'whereshouldilive.space' + '@' + 'gmail' + '.' + 'com');
+              </script>
 
 						</div>
 					</section>

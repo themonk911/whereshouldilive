@@ -1,0 +1,328 @@
+ASSET ID,LOCATION,LOCATION DESCRIPTION,BBQ TYPE,Location 1,LATITUDE,LONGITUDE
+BBQ23,Acton,Black Mountain Peninsula District Park,Electric,"(-35.291606, 149.100139)",-35.291606,149.100139
+BBQ134,Bonython,Derrington Crescent Pedestrian Parkland,Electric,"(-35.429604, 149.071265)",-35.429604,149.071265
+BBQ435,Greenway,Tuggeranong Town Park,Electric,"(-35.4099, 149.065091)",-35.4099,149.065091
+BBQ53,Gungahlin,Yerrabi District Park,Electric,"(-35.179366, 149.130643)",-35.179366,149.130643
+BBQ96,Fadden,Fadden Pines District Park,Electric,"(-35.410421, 149.120004)",-35.410421,149.120004
+BBQ73,Barton,Telopea Park,Electric,"(-35.314876, 149.137811)",-35.314876,149.137811
+BBQ296,Greenway,Pine Island South,Electric,"(-35.432464, 149.066173)",-35.432464,149.066173
+BBQ491,Franklin,Kilmeny Close Crip Park,Electric,"(-35.197073, 149.143561)",-35.197073,149.143561
+BBQ486,Kingston,Norgrove Neighbourhood Park,Electric,"(-35.315017, 149.14675)",-35.315017,149.14675
+BBQ432,Kambah,Kambah District Park,Electric,"(-35.391864, 149.062164)",-35.391864,149.062164
+BBQ427,Yarralumla,Weston Park,Electric,"(-35.292516, 149.093201)",-35.292516,149.093201
+BBQ155,Greenway,Pine Island Central,Electric,"(-35.427589, 149.062231)",-35.427589,149.062231
+BBQ71,Barton,Telopea Park,Electric,"(-35.315552, 149.1372)",-35.315552,149.1372
+BBQ287,Greenway,Pine Island South,Electric,"(-35.432916, 149.066863)",-35.432916,149.066863
+BBQ98,Fadden,Fadden Pines District Park,Electric,"(-35.411668, 149.120282)",-35.411668,149.120282
+BBQ32,Belconnen,Lake Ginninderra Western Foreshores,Electric,"(-35.227238, 149.063187)",-35.227238,149.063187
+BBQ94,Fadden,Fadden Pines District Park,Electric,"(-35.410913, 149.119395)",-35.410913,149.119395
+BBQ133,Gordon,Point Hut District Park,Electric,"(-35.456559, 149.083915)",-35.456559,149.083915
+BBQ478,Yarralumla,Lennox Gardens,Electric,"(-35.297436, 149.123005)",-35.297436,149.123005
+BBQ439,Belconnen,Ginninderra Peninsula District Park West,Electric,"(-35.225735, 149.069598)",-35.225735,149.069598
+BBQ430,Yarralumla,Lennox Gardens,Electric,"(-35.29848, 149.121803)",-35.29848,149.121803
+BBQ20,Campbell,Molonglo Reach District Park,Electric,"(-35.304593, 149.167366)",-35.304593,149.167366
+BBQ14,Ainslie,Corroboree Park,Electric,"(-35.269006, 149.142377)",-35.269006,149.142377
+BBQ130,Dunlop,James Harrison Street Neighbourhood Park,Electric,"(-35.191165, 149.016913)",-35.191165,149.016913
+BBQ123,Gordon,Point Hut District Park,Electric,"(-35.455778, 149.084313)",-35.455778,149.084313
+BBQ494,Yarralumla,Weston Park,Electric,"(-35.291834, 149.090334)",-35.291834,149.090334
+BBQ396,Forde,Bruce Dittmar Street Central Neighbourhood Park,Electric,"(-35.176041, 149.144996)",-35.176041,149.144996
+BBQ387,Weston,Dillon Close Pedestrian Parkland,Electric,"(-35.337187, 149.054707)",-35.337187,149.054707
+BBQ474,Yarralumla,Yarralumla Bay District Park,Electric,"(-35.299422, 149.103594)",-35.299422,149.103594
+BBQ56,Gungahlin,Yerrabi District Park,Electric,"(-35.179329, 149.130617)",-35.179329,149.130617
+BBQ388,Rivett,Bangalay Crescent Neighbourhood Park,Electric,"(-35.347715, 149.038192)",-35.347715,149.038192
+BBQ29,Belconnen,Lake Ginninderra Western Foreshores,Electric,"(-35.227896, 149.062728)",-35.227896,149.062728
+BBQ425,Phillip,Edison District Park,Electric,"(-35.34133, 149.090271)",-35.34133,149.090271
+BBQ247,Greenway,Pine Island Central,Electric,"(-35.427501, 149.060257)",-35.427501,149.060257
+BBQ434,Kambah,Kambah District Park,Electric,"(-35.392172, 149.062029)",-35.392172,149.062029
+BBQ89,Belconnen,John Knight Memorial Park,Electric,"(-35.237871, 149.07426)",-35.237871,149.07426
+BBQ443,Belconnen,John Knight Memorial Park,Electric,"(-35.234384, 149.073355)",-35.234384,149.073355
+BBQ5,Hughes,Groom Street - Pedestrian Parkland,Wood,"(-35.332875, 149.088974)",-35.332875,149.088974
+BBQ104,Greenway,Lake Tuggeranong District Park,Electric,"(-35.40518, 149.071507)",-35.40518,149.071507
+BBQ392,Amaroo,Bizant Street Neighbourhood Park,Electric,"(-35.173872, 149.135474)",-35.173872,149.135474
+BBQ30,Belconnen,Lake Ginninderra Western Foreshores,Electric,"(-35.227465, 149.063448)",-35.227465,149.063448
+BBQ383,Kambah,Summerland Circuit Neighbourhood Park,Electric,"(-35.385594, 149.071294)",-35.385594,149.071294
+BBQ80,Yarralumla,Weston Park,Gas,"(-35.295686, 149.095155)",-35.295686,149.095155
+BBQ128,Fyshwick,Molonglo Reach Water Ski,Electric,"(-35.30499, 149.174677)",-35.30499,149.174677
+BBQ476,Gungahlin,Yerrabi District Park,Electric,"(-35.179115, 149.130325)",-35.179115,149.130325
+BBQ66,Gordon,Point Hut District Park,Electric,"(-35.456044, 149.084727)",-35.456044,149.084727
+BBQ70,Barton,Telopea Park,Electric,"(-35.315637, 149.137298)",-35.315637,149.137298
+BBQ132,Belconnen,John Knight Memorial Park,Electric,"(-35.235226, 149.074196)",-35.235226,149.074196
+BBQ495,Acton,Black Mountain Peninsula District Park,Electric,"(-35.292266, 149.099613)",-35.292266,149.099613
+BBQ483,Gungahlin,Gungahlin Sportsground,Electric,"(-35.185061, 149.126278)",-35.185061,149.126278
+BBQ7,Braddon,Lowanna Street - Neighbourhood Park,Electric,"(-35.264829, 149.133249)",-35.264829,149.133249
+BBQ402,Franklin,Clare Burton Circuit Pedestrian Parkland,Electric,"(-35.200146, 149.147774)",-35.200146,149.147774
+BBQ492,Franklin,Kilmeny Close Crip Park,Electric,"(-35.198023, 149.143886)",-35.198023,149.143886
+BBQ438,Belconnen,Ginninderra Peninsula District Park East,Electric,"(-35.229117, 149.074029)",-35.229117,149.074029
+BBQ389,Forde,Ray Ellis Crescent Town Park,Electric,"(-35.172513, 149.142059)",-35.172513,149.142059
+BBQ95,Fadden,Fadden Pines District Park,Electric,"(-35.411304, 149.121057)",-35.411304,149.121057
+BBQ479,Bonner,Fernando Street Pedestrian Parkland,Electric,"(-35.161252, 149.136322)",-35.161252,149.136322
+BBQ436,Phillip,Edison District Park,Electric,"(-35.341353, 149.090026)",-35.341353,149.090026
+BBQ403,Oaks Estate,River Street Neighbourhood Park,Electric,"(-35.341674, 149.227464)",-35.341674,149.227464
+BBQ440,Belconnen,Ginninderra Peninsula District Park West,Electric,"(-35.225813, 149.069421)",-35.225813,149.069421
+BBQ102,Greenway,Lake Tuggeranong District Park,Electric,"(-35.408426, 149.069794)",-35.408426,149.069794
+BBQ400,Crace,Narden Street Community Park,Electric,"(-35.201412, 149.102208)",-35.201412,149.102208
+BBQ384,Kambah,Boddington Crescent Neighbourhood Park,Electric,"(-35.383169, 149.051903)",-35.383169,149.051903
+BBQ44,Latham,Umbagong District Park,Electric,"(-35.211658, 149.031092)",-35.211658,149.031092
+BBQ431,Wright,Dot Butler Street Neighbourhood Park,Electric,"(-35.324398, 149.037221)",-35.324398,149.037221
+BBQ12,Turner,Haig Park,Electric,"(-35.269681, 149.128442)",-35.269681,149.128442
+BBQ475,Belconnen,Ginninderra Peninsula District Park West,Electric,"(-35.224587, 149.069131)",-35.224587,149.069131
+BBQ393,Belconnen,John Knight Memorial Park,Electric,"(-35.233758, 149.073274)",-35.233758,149.073274
+BBQ31,Belconnen,Lake Ginninderra Western Foreshores,Electric,"(-35.227283, 149.063379)",-35.227283,149.063379
+BBQ401,Bonner,Burnum Burnum Close Neighborhood Oval,Electric,"(-35.159347, 149.142476)",-35.159347,149.142476
+BBQ54,Gungahlin,Yerrabi District Park,Electric,"(-35.179247, 149.130882)",-35.179247,149.130882
+BBQ127,Fyshwick,Molonglo Reach Water Ski,Electric,"(-35.30478, 149.17469)",-35.30478,149.17469
+BBQ428,Yarralumla,Lennox Gardens,Electric,"(-35.298678, 149.120651)",-35.298678,149.120651
+BBQ274,Greenway,Pine Island Central,Electric,"(-35.427261, 149.059826)",-35.427261,149.059826
+BBQ75,Yarralumla,Alexandrina Drive - Pedestrian Parkland,Gas,"(-35.297866, 149.109266)",-35.297866,149.109266
+BBQ60,Kambah,Kambah District Park Woolshed,Electric,"(-35.388653, 149.060559)",-35.388653,149.060559
+BBQ17,City,Glebe Park,Electric,"(-35.281891, 149.13634)",-35.281891,149.13634
+BBQ156,Greenway,Pine Island Central,Electric,"(-35.427455, 149.061547)",-35.427455,149.061547
+BBQ248,Greenway,Pine Island Central,Electric,"(-35.42745, 149.060722)",-35.42745,149.060722
+BBQ437,Belconnen,Ginninderra Peninsula District Park East,Electric,"(-35.229031, 149.074211)",-35.229031,149.074211
+BBQ426,Yarralumla,Weston Park,Electric,"(-35.293718, 149.093399)",-35.293718,149.093399
+BBQ42,Hall,Gladstone Street Park,Electric,"(-35.172104, 149.069711)",-35.172104,149.069711
+BBQ105,Campbell,Rememberance Park,Electric,"(-35.27989, 149.151007)",-35.27989,149.151007
+BBQ55,Gungahlin,Yerrabi District Park,Electric,"(-35.179209, 149.130852)",-35.179209,149.130852
+BBQ65,Greenway,Tuggeranong Town Park,Electric,"(-35.410761, 149.064734)",-35.410761,149.064734
+BBQ76,Yarralumla,Alexandrina Drive - Pedestrian Parkland,Gas,"(-35.298719, 149.11062)",-35.298719,149.11062
+BBQ99,Nicholls,Candlebark Close Neighbourhood Park,Electric,"(-35.191971, 149.110101)",-35.191971,149.110101
+BBQ429,Yarralumla,Lennox Gardens,Electric,"(-35.298464, 149.120279)",-35.298464,149.120279
+BBQ21,Acton,Black Mountain Peninsula District Park,Electric,"(-35.287188, 149.101434)",-35.287188,149.101434
+BBQ61,Kambah,Kambah District Park Woolshed,Electric,"(-35.388597, 149.060463)",-35.388597,149.060463
+BBQ249,Greenway,Pine Island Central,Electric,"(-35.427722, 149.06089)",-35.427722,149.06089
+BBQ131,Harrison,Tanami Street Neighbourhood Park,Electric,"(-35.198422, 149.15792)",-35.198422,149.15792
+BBQ16,City,Glebe Park,Electric,"(-35.282415, 149.136694)",-35.282415,149.136694
+BBQ444,Belconnen,John Knight Memorial Park,Electric,"(-35.234753, 149.073366)",-35.234753,149.073366
+BBQ135,Bonython,Burgoyne Street Neighbourhood Park,Electric,"(-35.426285, 149.071665)",-35.426285,149.071665
+BBQ404,Forde,Volpato Street Neighbourhood Park,Electric,"(-35.160474, 149.148979)",-35.160474,149.148979
+BBQ386,Cook,Templeton Street Neighbourhood Park,Electric,"(-35.259309, 149.062025)",-35.259309,149.062025
+BBQ397,Casey,Yeend Avenue Neighbourhood Park,Electric,"(-35.166509, 149.097284)",-35.166509,149.097284
+BBQ390,Chifley,Shann Place Neighbourhood Park,Electric,"(-35.352855, 149.076248)",-35.352855,149.076248
+BBQ85,Yarralumla,Weston Park,Gas,"(-35.290275, 149.092152)",-35.290275,149.092152
+BBQ15,City,Glebe Park,Electric,"(-35.283536, 149.136387)",-35.283536,149.136387
+BBQ398,Forde,Pahlman Street Neighbourhood Park,Electric,"(-35.168163, 149.146596)",-35.168163,149.146596
+BBQ433,Kambah,Kambah District Park,Electric,"(-35.392047, 149.06213)",-35.392047,149.06213
+BBQ103,Greenway,Lake Tuggeranong District Park,Electric,"(-35.40722, 149.07057)",-35.40722,149.07057
+BBQ445,Tharwa,Tharwa Bridge Reserve,Gas,"(-35.509138, 149.069822)",-35.509138,149.069822
+BBQ493,Yarralumla,Weston Park,Electric,"(-35.291814, 149.090308)",-35.291814,149.090308
+BBQ8,Braddon,Lowanna Street - Neighbourhood Park,Electric,"(-35.264197, 149.133979)",-35.264197,149.133979
+BBQ106,Campbell,Rememberance Park,Electric,"(-35.279479, 149.151269)",-35.279479,149.151269
+BBQ43,Hall,Gladstone Street Park,Electric,"(-35.171753, 149.069825)",-35.171753,149.069825
+BBQ391,Forde,Tom Nicholas Crescent Pedestrian Parkland,Electric,"(-35.172395, 149.144966)",-35.172395,149.144966
+BBQ377,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325044, 148.948567)",-35.325044,148.948567
+BBQ257,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.327194, 148.938837)",-35.327194,148.938837
+BBQ319,Coree (Rural Dist.),Uriarra West Shelter 3,Wood,"(-35.246111, 148.951424)",-35.246111,148.951424
+BBQ216,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325979, 148.947908)",-35.325979,148.947908
+BBQ157,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.327528, 148.938684)",-35.327528,148.938684
+BBQ352,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326155, 148.947274)",-35.326155,148.947274
+BBQ217,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326013, 148.947753)",-35.326013,148.947753
+BBQ220,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326191, 148.946885)",-35.326191,148.946885
+BBQ250,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.248429, 148.952437)",-35.248429,148.952437
+BBQ246,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325953, 148.948074)",-35.325953,148.948074
+BBQ160,Kowen (Rural Dist.),Molonglo Gorge Picnic Area,Gas,"(-35.328583, 149.24971)",-35.328583,149.24971
+BBQ318,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245887, 148.951403)",-35.245887,148.951403
+BBQ256,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.326648, 148.940554)",-35.326648,148.940554
+BBQ311,Coree (Rural Dist.),Swamp Creek,Wood,"(-35.243699, 148.950942)",-35.243699,148.950942
+BBQ185,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325005, 148.948613)",-35.325005,148.948613
+BBQ324,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326076, 148.946283)",-35.326076,148.946283
+BBQ268,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319832, 148.953385)",-35.319832,148.953385
+BBQ184,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325865, 148.947031)",-35.325865,148.947031
+BBQ218,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325993, 148.946639)",-35.325993,148.946639
+BBQ177,Coree (Rural Dist.),Uriarra West,Wood,"(-35.244894, 148.951418)",-35.244894,148.951418
+BBQ314,Coree (Rural Dist.),Swamp Creek,Wood,"(-35.243698, 148.950912)",-35.243698,148.950912
+BBQ316,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245797, 148.951382)",-35.245797,148.951382
+BBQ359,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.249817, 148.951811)",-35.249817,148.951811
+BBQ125,Barton,Telopea Park,Electric,"(-35.314874, 149.137697)",-35.314874,149.137697
+BBQ245,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326044, 148.947649)",-35.326044,148.947649
+BBQ208,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245707, 148.951375)",-35.245707,148.951375
+BBQ176,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245402, 148.951605)",-35.245402,148.951605
+BBQ252,Coree (Rural Dist.),Uriarra West Shelter 1,Wood,"(-35.244356, 148.950994)",-35.244356,148.950994
+BBQ260,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.32704, 148.939776)",-35.32704,148.939776
+BBQ219,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325934, 148.946764)",-35.325934,148.946764
+BBQ323,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326089, 148.947456)",-35.326089,148.947456
+BBQ487,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.289515, 148.875873)",-35.289515,148.875873
+BBQ265,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.3255, 148.948453)",-35.3255,148.948453
+BBQ209,Coree (Rural Dist.),Uriarra West Shelter 3,Wood,"(-35.246097, 148.951412)",-35.246097,148.951412
+BBQ315,Coree (Rural Dist.),Swamp Creek,Wood,"(-35.242743, 148.951185)",-35.242743,148.951185
+BBQ142,Kowen (Rural Dist.),Molonglo Gorge Nature Reserve,Gas,"(-35.322216, 149.246546)",-35.322216,149.246546
+BBQ453,Coree (Rural Dist.),Cotter Campground,Gas,"(-35.326118, 148.947043)",-35.326118,148.947043
+BBQ346,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325674, 148.948255)",-35.325674,148.948255
+BBQ267,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325829, 148.947127)",-35.325829,148.947127
+BBQ304,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245004, 148.951429)",-35.245004,148.951429
+BBQ251,Coree (Rural Dist.),Uriarra West,Wood,"(-35.244814, 148.951353)",-35.244814,148.951353
+BBQ385,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319841, 148.953465)",-35.319841,148.953465
+BBQ174,Coree (Rural Dist.),Uriarra West Shelter 2,Wood,"(-35.244833, 148.951009)",-35.244833,148.951009
+BBQ454,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326078, 148.947488)",-35.326078,148.947488
+BBQ239,Coree (Rural Dist.),Blue Range Hut,Gas,"(-35.289566, 148.875925)",-35.289566,148.875925
+BBQ312,Coree (Rural Dist.),Swamp Creek,Wood,"(-35.24295, 148.951187)",-35.24295,148.951187
+BBQ253,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.248608, 148.952741)",-35.248608,148.952741
+BBQ376,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.249324, 148.952065)",-35.249324,148.952065
+BBQ347,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326049, 148.946395)",-35.326049,148.946395
+BBQ263,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325916, 148.946911)",-35.325916,148.946911
+BBQ207,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326106, 148.946114)",-35.326106,148.946114
+BBQ242,Kowen (Rural Dist.),Molonglo Gorge Nature Reserve,Gas,"(-35.327904, 149.248579)",-35.327904,149.248579
+BBQ381,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319782, 148.954151)",-35.319782,148.954151
+BBQ258,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.327469, 148.93887)",-35.327469,148.93887
+BBQ255,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.326835, 148.940113)",-35.326835,148.940113
+BBQ200,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319908, 148.954704)",-35.319908,148.954704
+BBQ325,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325206, 148.948416)",-35.325206,148.948416
+BBQ266,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325808, 148.947232)",-35.325808,148.947232
+BBQ214,Coree (Rural Dist.),Cotter Campground,Electric,"(-35.326278, 148.945923)",-35.326278,148.945923
+BBQ262,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.32622, 148.939749)",-35.32622,148.939749
+BBQ261,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.326471, 148.939634)",-35.326471,148.939634
+BBQ211,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245856, 148.95178)",-35.245856,148.95178
+BBQ455,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326045, 148.947611)",-35.326045,148.947611
+BBQ269,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.32521, 148.948702)",-35.32521,148.948702
+BBQ186,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.32577, 148.947384)",-35.32577,148.947384
+BBQ237,Kowen (Rural Dist.),Old Kowen Homestead,Gas,"(-35.288799, 149.287211)",-35.288799,149.287211
+BBQ175,Coree (Rural Dist.),Uriarra West,Wood,"(-35.24507, 148.951454)",-35.24507,148.951454
+BBQ326,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.325306, 148.948608)",-35.325306,148.948608
+BBQ221,Coree (Rural Dist.),Cotter Campground,Wood,"(-35.326019, 148.946517)",-35.326019,148.946517
+BBQ254,Coree (Rural Dist.),Cotter Bend,Electric,"(-35.326844, 148.94068)",-35.326844,148.94068
+BBQ354,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.246477, 148.953331)",-35.246477,148.953331
+BBQ320,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319801, 148.954339)",-35.319801,148.954339
+BBQ350,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.250238, 148.951336)",-35.250238,148.951336
+BBQ382,Stromlo (Rural Dist.),Casuarina Sands Picnic Area,Electric,"(-35.319802, 148.954079)",-35.319802,148.954079
+BBQ489,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.290285, 148.876164)",-35.290285,148.876164
+BBQ126,Barton,Bowen Park,Electric,"(-35.30815, 149.13975)",-35.30815,149.13975
+BBQ313,Coree (Rural Dist.),Uriarra West Shelter 1,Wood,"(-35.244347, 148.950989)",-35.244347,148.950989
+BBQ198,Kowen (Rural Dist.),Molonglo Gorge Nature Reserve,Wood,"(-35.322634, 149.245355)",-35.322634,149.245355
+BBQ173,Coree (Rural Dist.),Uriarra West Shelter 2,Wood,"(-35.244834, 148.950978)",-35.244834,148.950978
+BBQ317,Coree (Rural Dist.),Uriarra West,Wood,"(-35.245565, 148.95164)",-35.245565,148.95164
+BBQ375,Stromlo (Rural Dist.),Uriarra East,Wood,"(-35.249009, 148.952509)",-35.249009,148.952509
+BBQ477,Barton,Bowen Park,Electric,"(-35.308015, 149.139931)",-35.308015,149.139931
+BBQ463,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.66299, 148.988798)",-35.66299,148.988798
+BBQ349,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.864784, 149.011151)",-35.864784,149.011151
+BBQ168,Booth (Rural Dist.),Namadgi National Park Glendale Picnic Area,Wood,"(-35.681491, 148.998275)",-35.681491,148.998275
+BBQ166,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.864493, 149.010997)",-35.864493,149.010997
+BBQ353,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.32283, 148.942114)",-35.32283,148.942114
+BBQ462,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662954, 148.988552)",-35.662954,148.988552
+BBQ464,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662584, 148.988793)",-35.662584,148.988793
+BBQ281,Paddys River (Rural Dist.),Greens Picnic Area,Wood,"(-35.44321, 148.926476)",-35.44321,148.926476
+BBQ328,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.444405, 148.929418)",-35.444405,148.929418
+BBQ341,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481169, 148.939647)",-35.481169,148.939647
+BBQ189,Paddys River (Rural Dist.),Nnp Vic,Gas,"(-35.530783, 149.065709)",-35.530783,149.065709
+BBQ148,Paddys River (Rural Dist.),Murrays Corner,Gas,"(-35.364042, 148.952534)",-35.364042,148.952534
+BBQ280,Paddys River (Rural Dist.),Greens Picnic Area,Wood,"(-35.442968, 148.926184)",-35.442968,148.926184
+BBQ233,Rendezvous Creek (Rural Dist.),Orroral Picnic Area,Wood,"(-35.664955, 148.9891)",-35.664955,148.9891
+BBQ473,Paddys River (Rural Dist.),,Gas,"(-35.487914, 148.934278)",-35.487914,148.934278
+BBQ202,Paddys River (Rural Dist.),Webbs Picnic Area,Wood,"(-35.440895, 148.926497)",-35.440895,148.926497
+BBQ264,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.323472, 148.941515)",-35.323472,148.941515
+BBQ140,Tennent (Rural Dist.),Honeysuckle Campground - Apollo,Wood,"(-35.58365, 148.975246)",-35.58365,148.975246
+BBQ482,Mount Clear (Rural Dist.),Mount Clear Campground,Wood,"(-35.865058, 149.010594)",-35.865058,149.010594
+BBQ322,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.323388, 148.9412)",-35.323388,148.9412
+BBQ468,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.661703, 148.988718)",-35.661703,148.988718
+BBQ235,Rendezvous Creek (Rural Dist.),Orroral Picnic Area,Wood,"(-35.664825, 148.988836)",-35.664825,148.988836
+BBQ416,Rendezvous Creek (Rural Dist.),Orroral Campground,Gas,"(-35.661993, 148.988909)",-35.661993,148.988909
+BBQ413,Paddys River (Rural Dist.),Webbs Picnic Area,Electric,"(-35.440039, 148.927892)",-35.440039,148.927892
+BBQ423,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480761, 148.939842)",-35.480761,148.939842
+BBQ496,Paddys River (Rural Dist.),Namadgi National Park Special Purpose,Wood,"(-35.532978, 149.070346)",-35.532978,149.070346
+BBQ422,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480831, 148.938879)",-35.480831,148.938879
+BBQ343,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480897, 148.93822)",-35.480897,148.93822
+BBQ419,Googong (Rural Dist.),Googong North,Gas,"(-35.411459, 149.25975)",-35.411459,149.25975
+BBQ303,Googong (Rural Dist.),Googong South,Electric,"(-35.511472, 149.258184)",-35.511472,149.258184
+BBQ334,Tennent (Rural Dist.),Honeysuckle Campground - Mercury,Wood,"(-35.583074, 148.97545)",-35.583074,148.97545
+BBQ331,Paddys River (Rural Dist.),Blewitts Picnic Area,Wood,"(-35.444347, 148.923484)",-35.444347,148.923484
+BBQ145,Mount Clear (Rural Dist.),Mount Clear Horse Yards,Wood,"(-35.868002, 149.015321)",-35.868002,149.015321
+BBQ461,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662885, 148.988792)",-35.662885,148.988792
+BBQ179,Googong (Rural Dist.),Googong North - Shelter,Gas,"(-35.410752, 149.261817)",-35.410752,149.261817
+BBQ307,Paddys River (Rural Dist.),Blewitts Picnic Area,Wood,"(-35.44409, 148.92352)",-35.44409,148.92352
+BBQ406,Paddys River (Rural Dist.),Sheedys Picnic Area,Electric,"(-35.44379, 148.928827)",-35.44379,148.928827
+BBQ459,Rendezvous Creek (Rural Dist.),Namadgi National Park Orroral Campground,Gas,"(-35.661963, 148.988872)",-35.661963,148.988872
+BBQ195,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481005, 148.938368)",-35.481005,148.938368
+BBQ282,Booth (Rural Dist.),Namadgi National Park Glendale Picnic Area,Wood,"(-35.680713, 148.997834)",-35.680713,148.997834
+BBQ290,Tennent (Rural Dist.),Honeysuckle Campground,Wood,"(-35.582844, 148.974712)",-35.582844,148.974712
+BBQ291,Googong (Rural Dist.),Googong North,Gas,"(-35.410643, 149.260678)",-35.410643,149.260678
+BBQ279,Paddys River (Rural Dist.),Webbs Picnic Area,Wood,"(-35.440315, 148.927188)",-35.440315,148.927188
+BBQ139,Tennent (Rural Dist.),Honeysuckle Campground,Gas,"(-35.583023, 148.974297)",-35.583023,148.974297
+BBQ409,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.443374, 148.929248)",-35.443374,148.929248
+BBQ448,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.443367, 148.929236)",-35.443367,148.929236
+BBQ196,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480779, 148.938339)",-35.480779,148.938339
+BBQ182,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.322788, 148.941848)",-35.322788,148.941848
+BBQ230,Paddys River (Rural Dist.),Blewitts Picnic Area,Wood,"(-35.444324, 148.923946)",-35.444324,148.923946
+BBQ420,Paddys River (Rural Dist.),Woods Reserve Campground,Gas,"(-35.480842, 148.939181)",-35.480842,148.939181
+BBQ451,Molonglo Valley (Rural Dist.),National Arboretum Of Canberra,Electric,"(-35.287024, 149.076812)",-35.287024,149.076812
+BBQ411,Paddys River (Rural Dist.),Webbs Picnic Area,Electric,"(-35.441358, 148.926226)",-35.441358,148.926226
+BBQ159,Paddys River (Rural Dist.),Thompsons Flat Picnic Area,Wood,"(-35.326293, 148.938376)",-35.326293,148.938376
+BBQ362,Tennent (Rural Dist.),Honeysuckle Campground,Wood,"(-35.582929, 148.974561)",-35.582929,148.974561
+BBQ154,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.443399, 148.929316)",-35.443399,148.929316
+BBQ418,Googong (Rural Dist.),Googong Boat Ramp,Gas,"(-35.430255, 149.258419)",-35.430255,149.258419
+BBQ292,Googong (Rural Dist.),Googong North,Gas,"(-35.410449, 149.260947)",-35.410449,149.260947
+BBQ472,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.66211, 148.988476)",-35.66211,148.988476
+BBQ276,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.44442, 148.928723)",-35.44442,148.928723
+BBQ447,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.44339, 148.929281)",-35.44339,148.929281
+BBQ410,Paddys River (Rural Dist.),Webbs Picnic Area,Electric,"(-35.441743, 148.92605)",-35.441743,148.92605
+BBQ480,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.864774, 149.010724)",-35.864774,149.010724
+BBQ271,Paddys River (Rural Dist.),Woods Reserve Campground,Gas,"(-35.480617, 148.938593)",-35.480617,148.938593
+BBQ415,Paddys River (Rural Dist.),Flints Picnic Area,Gas,"(-35.459077, 148.919444)",-35.459077,148.919444
+BBQ141,Tennent (Rural Dist.),Honeysuckle Campground,Wood,"(-35.583036, 148.974264)",-35.583036,148.974264
+BBQ408,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.443385, 148.929269)",-35.443385,148.929269
+BBQ183,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.322984, 148.941978)",-35.322984,148.941978
+BBQ234,Rendezvous Creek (Rural Dist.),Orroral Picnic Area,Wood,"(-35.665194, 148.988965)",-35.665194,148.988965
+BBQ414,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.444374, 148.929638)",-35.444374,148.929638
+BBQ295,Tennent (Rural Dist.),Honeysuckle Campground,Wood,"(-35.582803, 148.974072)",-35.582803,148.974072
+BBQ297,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481086, 148.940357)",-35.481086,148.940357
+BBQ471,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.661556, 148.989135)",-35.661556,148.989135
+BBQ342,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481283, 148.939596)",-35.481283,148.939596
+BBQ147,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.865319, 149.010804)",-35.865319,149.010804
+BBQ321,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.32371, 148.940972)",-35.32371,148.940972
+BBQ298,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481069, 148.94005)",-35.481069,148.94005
+BBQ340,Booth (Rural Dist.),Namadgi National Park Glendale Picnic Area,Wood,"(-35.680989, 148.997976)",-35.680989,148.997976
+BBQ270,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480862, 148.940782)",-35.480862,148.940782
+BBQ236,Googong (Rural Dist.),Googong South,Electric,"(-35.511813, 149.257675)",-35.511813,149.257675
+BBQ153,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.444665, 148.929726)",-35.444665,148.929726
+BBQ278,Paddys River (Rural Dist.),Webbs Picnic Area,Wood,"(-35.440203, 148.926942)",-35.440203,148.926942
+BBQ450,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.444528, 148.92855)",-35.444528,148.92855
+BBQ294,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481066, 148.940249)",-35.481066,148.940249
+BBQ467,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662031, 148.988251)",-35.662031,148.988251
+BBQ465,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662465, 148.988578)",-35.662465,148.988578
+BBQ300,Paddys River (Rural Dist.),Sheedys Picnic Area,Wood,"(-35.444602, 148.928535)",-35.444602,148.928535
+BBQ180,Googong (Rural Dist.),Googong North,Gas,"(-35.410105, 149.261399)",-35.410105,149.261399
+BBQ167,Booth (Rural Dist.),Namadgi National Park Glendale Picnic Area,Wood,"(-35.680995, 148.997729)",-35.680995,148.997729
+BBQ446,Paddys River (Rural Dist.),Sheedys Picnic Area - Shelter,Electric,"(-35.443395, 148.929302)",-35.443395,148.929302
+BBQ421,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.481102, 148.938774)",-35.481102,148.938774
+BBQ226,Paddys River (Rural Dist.),Greens Picnic Area,Wood,"(-35.443219, 148.926005)",-35.443219,148.926005
+BBQ460,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662797, 148.988532)",-35.662797,148.988532
+BBQ222,Cotter River (Rural Dist.),Bulls Head Shelter,Wood,"(-35.387776, 148.804514)",-35.387776,148.804514
+BBQ452,Molonglo Valley (Rural Dist.),National Arboretum Of Canberra,Electric,"(-35.287042, 149.076843)",-35.287042,149.076843
+BBQ231,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.864617, 149.010606)",-35.864617,149.010606
+BBQ469,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.661711, 148.9892)",-35.661711,148.9892
+BBQ259,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.324165, 148.941035)",-35.324165,148.941035
+BBQ466,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.662549, 148.988388)",-35.662549,148.988388
+BBQ481,Mount Clear (Rural Dist.),Mount Clear Campground,Wood,"(-35.864781, 149.010409)",-35.864781,149.010409
+BBQ149,Paddys River (Rural Dist.),Murrays Corner,Gas,"(-35.363195, 148.952178)",-35.363195,148.952178
+BBQ372,Rendezvous Creek (Rural Dist.),Orroral Tracking Station,Gas,"(-35.628721, 148.955743)",-35.628721,148.955743
+BBQ366,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.323015, 148.94115)",-35.323015,148.94115
+BBQ405,Paddys River (Rural Dist.),Sheedys Picnic Area,Electric,"(-35.443821, 148.929224)",-35.443821,148.929224
+BBQ225,Paddys River (Rural Dist.),Blewitts Picnic Area,Wood,"(-35.444424, 148.924121)",-35.444424,148.924121
+BBQ412,Paddys River (Rural Dist.),Webbs Picnic Area,Electric,"(-35.440621, 148.926681)",-35.440621,148.926681
+BBQ181,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.323233, 148.941452)",-35.323233,148.941452
+BBQ449,Paddys River (Rural Dist.),Discovery Picnic Area,Electric,"(-35.442681, 148.930129)",-35.442681,148.930129
+BBQ224,Cotter River (Rural Dist.),Bendora Picnic Area,Wood,"(-35.442303, 148.828301)",-35.442303,148.828301
+BBQ364,Tennent (Rural Dist.),Honeysuckle Campground,Wood,"(-35.582758, 148.97424)",-35.582758,148.97424
+BBQ206,Paddys River (Rural Dist.),The Cotter Avenue,Electric,"(-35.322757, 148.942197)",-35.322757,148.942197
+BBQ299,Paddys River (Rural Dist.),Woods Reserve Campground,Wood,"(-35.480865, 148.93995)",-35.480865,148.93995
+BBQ152,Cotter River (Rural Dist.),Bendora Picnic Area,Wood,"(-35.442386, 148.82795)",-35.442386,148.82795
+BBQ146,Mount Clear (Rural Dist.),Mt Clear Campground,Wood,"(-35.865138, 149.010922)",-35.865138,149.010922
+BBQ470,Rendezvous Creek (Rural Dist.),"Namadgi National Park, Orroral Campground",Wood,"(-35.66144, 148.988788)",-35.66144,148.988788
+BBQ344,Cotter River (Rural Dist.),Bendora Picnic Area,Wood,"(-35.44251, 148.828318)",-35.44251,148.828318
+BBQ484,Acton,Black Mountain Peninsula District Park,Electric,"(-35.292389, 149.101107)",-35.292389,149.101107
+BBQ485,Acton,Black Mountain Peninsula District Park,Electric,"(-35.292454, 149.10111)",-35.292454,149.10111
+BBQ497,Gungahlin,Yerrabi District Park,Electric,"(-35.178801, 149.130774)",-35.178801,149.130774
+BBQ33,Belconnen,Lake Ginninderra Western Foreshores,Electric,"(-35.225626, 149.063247)",-35.225626,149.063247
+BBQ288,Googong (Rural Dist.),Googong - Tin Hut,Gas,"(-35.497275, 149.258909)",-35.497275,149.258909
+BBQ6,Fisher,Araluen Street Neighbourhood Park,Electric,"(-35.360683, 149.057338)",-35.360683,149.057338
+BBQ371,New South Wales,Bulls Head Picnic Area,Wood,"(-35.386788, 148.804498)",-35.386788,148.804498
+BBQ394,Canberra Central (Rural Dist.),Lady Denman Drive Road Verge,Gas,"(-35.297903, 149.071927)",-35.297903,149.071927
+BBQ417,Coree (Rural Dist.),Cotter Campground,Gas,"(-35.325396, 148.948537)",-35.325396,148.948537
+BBQ305,New South Wales,Bulls Head Picnic Area,Wood,"(-35.387256, 148.804313)",-35.387256,148.804313
+BBQ338,New South Wales,Bulls Head Picnic Area,Wood,"(-35.387149, 148.804459)",-35.387149,148.804459
+BBQ50,Belconnen (Rural Dist.),Palmerville Heritage Park,Electric,"(-35.211746, 149.085572)",-35.211746,149.085572
+BBQ339,New South Wales,Bulls Head Picnic Area,Wood,"(-35.387667, 148.804038)",-35.387667,148.804038
+BBQ488,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.289676, 148.876109)",-35.289676,148.876109
+BBQ500,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.290036, 148.875975)",-35.290036,148.875975
+BBQ501,Coree (Rural Dist.),Sherwood Homestead,Wood,"(-35.273249, 148.892002)",-35.273249,148.892002
+BBQ499,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.289299, 148.875879)",-35.289299,148.875879
+BBQ498,Coree (Rural Dist.),Blue Range Hut,Wood,"(-35.289079, 148.875874)",-35.289079,148.875874
+BBQ442,Acton,Acton Park District Park,Electric,"(-35.286194, 149.124418)",-35.286194,149.124418
+BBQ441,Acton,Acton Park District Park,Electric,"(-35.28631, 149.124752)",-35.28631,149.124752
