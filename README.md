@@ -20,4 +20,4 @@ $ npm start
 
 ## About
 
-'Where Should I Live' was developed at the 2017 Australian GovHack.
+'Where Should I Live' was developed at the 2017 Australian GovHack. Visit our official [hackerspace](https://2017.hackerspace.govhack.org/project/where-should-i-live).
