@@ -5,7 +5,7 @@ import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import boundary_json from './data/ACT-Division-Boundaries.json'
 import {summary} from './data/summary_of_all_data.js'
 
-class SimpleExample extends Component {
+class DataConnector extends Component {
 
   constructor()
   {
@@ -24,7 +24,7 @@ class SimpleExample extends Component {
     {
       sum += weight_array[i] * intensity_array[i];
     }
-    return sum;
+    return sum/weight_array.length;
   }
   onEachFeature(feature, layer) {
     layer.bindTooltip(feature.properties.division_name);
@@ -32,7 +32,7 @@ class SimpleExample extends Component {
  render() {
     return (
     <div>
-      <Map center={this.position} zoom={11.5} >
+      <Map center={this.position} zoom={11.2} >
             <LayersControl>
               <LayersControl.BaseLayer name="Base" checked>
                 <TileLayer
@@ -45,9 +45,14 @@ class SimpleExample extends Component {
                 <FeatureGroup color="purple">
                   <HeatmapLayer
                     points={summary}
+                    radius={1000}
+                    blur={5000}
                     longitudeExtractor={m => m[1]}
                     latitudeExtractor={m => m[2]}
-                    intensityExtractor={m => this.compute_intensity([m[3],m[4], m[5], m[6]], [1,1,1,1])*this.props.intensity1 + this.compute_intensity([m[7],m[8], m[9], m[10]], [1,1,1,1]) * this.props.intensity2}
+                    intensityExtractor={m => this.compute_intensity(
+                      [m[3], m[4], m[5], m[6], m[7]],
+                      [this.props.health_intensity, this.props.education_intensity, this.props.safety_intensity, this.props.nature_intensity, this.props.transport_intensity]
+                      )}
                   />
                 </FeatureGroup>
               </LayersControl.Overlay>
@@ -55,8 +60,7 @@ class SimpleExample extends Component {
               <LayersControl.Overlay name="Boundaries"
               fitBoundsOnLoad
               fitBoundsOnUpdate
-              checked
-              onEachFeature={this.onEachFeature}
+              checked              
               >
              <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
@@ -68,4 +72,4 @@ class SimpleExample extends Component {
 
 }
 
-export default SimpleExample;
+export default DataConnector;

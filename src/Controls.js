@@ -1,6 +1,6 @@
 import React, { Component }  from 'react'
 import { render } from 'react-dom'
-import SimpleExample from './App'
+import DataConnector from './App'
 
 import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
@@ -19,106 +19,106 @@ class Controls extends Component {
   {
     super();
     this.state = {
-      intensity1: 10,
-      intensity2: 20,
-      intensity3: 30,
-      intensity4: 40,
-      intensity5: 50,
-      intensity6: 60
+      education_intensity: 50,
+      safety_intensity: 80,
+      nature_intensity: 50,
+      health_intensity: 80,
+      housing_intensity: 10,
+      transport_intensity: 50
     };
   }
 
   handleChange1 = (value) => {
     this.setState({
-      intensity1: value
+      education_intensity: value
     });
   }
   handleChange2 = (value) => {
     this.setState({
-      intensity2: value
+      safety_intensity: value
     });
   }
 
   handleChange3 = (value) => {
     this.setState({
-      intensity3: value
+      nature_intensity: value
     });
   }
   handleChange4 = (value) => {
     this.setState({
-      intensity4: value
+      health_intensity: value
     });
   }
   handleChange5 = (value) => {
     this.setState({
-      intensity5: value
+      housing_intensity: value
     });
   }
   handleChange6 = (value) => {
     this.setState({
-      intensity6: value
+      transport_intensity: value
     });
   }
 
   render() {
     return (
       <div>
-      <section className="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="second">
+      <section className="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 
         <div className="content">
-          <h2>Magna etiam feugiat</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+          <h2>Choose what matters to you</h2>
+          <p>
+          Each of the sliders corresponds to a factor which influences where you might want to live. Drag the sliders to indicate the importance of each one to your needs, and watch the heatmap change in response.
+          </p>
 
           <ul className="actions vertical">
             <li>
-              Police Stations
-              <Slider step={10} dots value={this.state.intensity1} onChange={this.handleChange1} />
+              Education
+              <Slider step={10} dots value={this.state.education_intensity} onChange={this.handleChange1} />
             </li>
             <li>
-              Parks
-              <Slider step={10} dots value={this.state.intensity2} onChange={this.handleChange2} />
+              Safety
+              <Slider step={10} dots value={this.state.safety_intensity} onChange={this.handleChange2} />
             </li>
             <li>
-              Traffic
-              <Slider step={10} dots value={this.state.intensity3} onChange={this.handleChange3} />
+              Nature
+              <Slider step={10} dots value={this.state.nature_intensity} onChange={this.handleChange3} />
             </li>
             <li>
-              Food
-              <Slider step={10} dots value={this.state.intensity4} onChange={this.handleChange4} />
+              Health
+              <Slider step={10} dots value={this.state.health_intensity} onChange={this.handleChange4} />
             </li>
             <li>
-              Food
-              <Slider step={10} dots value={this.state.intensity5} onChange={this.handleChange5} />
+              Housing
+              <Slider step={10} dots value={this.state.housing_intensity} onChange={this.handleChange5} />
             </li>
             <li>
-              Food
-              <Slider step={10} dots value={this.state.intensity6} onChange={this.handleChange6} />
+              Transport
+              <Slider step={10} dots value={this.state.transport_intensity} onChange={this.handleChange6} />
             </li>
-          </ul>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+          </ul>          
 
           <ul className="actions vertical">
-            <li><a href="#third" className="button smooth-scroll-middle">Learn More</a></li>
+            <li><a href="#second" className="button smooth-scroll-middle"> Find out how it works </a></li>
           </ul>
 
         </div>
 
         <div className="image" alt="">
-            <SimpleExample
-            intensity1={this.state.intensity1}
-            intensity2={this.state.intensity2}
-            intensity3={this.state.intensity3}
-            intensity4={this.state.intensity4}
-            intensity5={this.state.intensity5}
-            intensity6={this.state.intensity6}
+            <DataConnector
+            education_intensity={this.state.education_intensity}
+            safety_intensity={this.state.safety_intensity}
+            nature_intensity={this.state.nature_intensity}
+            health_intensity={this.state.health_intensity}
+            housing_intensity={this.state.housing_intensity}
+            transport_intensity={this.state.transport_intensity}
            />
         </div>
         </section>
 
 </div>
 
-        // <SimpleExample intensity={this.state.intensity} />
+        // <DataConnector intensity={this.state.intensity} />
         // <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
         // <div id='counter'>{this.state.intensity}</div>
 
