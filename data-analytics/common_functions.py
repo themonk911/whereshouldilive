@@ -30,6 +30,7 @@ class ProcessSSCData:
 			return self.ssc_map[ssc]
 		else:
 			return False
-		
-ssc_obj = ProcessSSCData()
-print (ssc_obj.convert_ssc_to_suburb_name(80110))
+
+if __name__=="__main__":		
+	ssc_obj = ProcessSSCData()
+	print (ssc_obj.convert_ssc_to_suburb_name(80110))
