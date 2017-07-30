@@ -24,8 +24,10 @@ class DataPoints:
                 coordinates = line[line.find("(((")+3:line.find(")))")].split(',')
                 for coordinate in coordinates:
                     split_line = coordinate.strip().split(' ')
+
                     lon = float(split_line[0])
                     lat = float(split_line[1])
+                    # print(lon, lat)
                     coordinates_shapely.append(
                         (
                             lon,
@@ -51,7 +53,7 @@ class DataPoints:
         diff_lon = self.max_lon - self.min_lon
         diff_lat = self.max_lat - self.min_lat
 
-        number = 30
+        number = 50
         delta_lon = diff_lon / float(number)
         delta_lat = diff_lat / float(number)
 
@@ -67,14 +69,13 @@ class DataPoints:
                     if Polygon(self.suburb_polygons[suburb]).contains(point):
                         print suburb, point
                         if suburb in self.suburb_grid:
-                            self.suburb_grid[suburb].append((lat, lon))
+                            self.suburb_grid[suburb].append((lon, lat))
                         else:
-                            self.suburb_grid[suburb] = [(lat, lon)]
+                            self.suburb_grid[suburb] = [(lon, lat)]
 
         with open("../src/data/suburb_grid.data", 'w') as grid_file:
             for suburb in self.suburb_grid:
                 grid_file.write(suburb + ", " + str(self.suburb_grid[suburb]) + "\n")
-
 
     def execute(self):
         self.load_data()

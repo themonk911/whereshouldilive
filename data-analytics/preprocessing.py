@@ -22,6 +22,7 @@ class DatasetPreprocessing:
         self.in_public_furniture = "Public_Furniture_in_the_ACT.csv"
         self.in_playgrounds = "Town_And_District_Playgrounds.csv"
         self.in_dog_parks = "Fenced_Dog_Parks.csv"
+        self.in_crime_stats = "ACT_CrimeStats_-_Jan2012_to_Mar2017"
 
         self.out_act_police_stations_locations = "safety_distance_to_police_stations.data"
         self.out_act_hospital_locations = "health_distance_to_hospitals.data"
@@ -35,6 +36,7 @@ class DatasetPreprocessing:
         self.out_public_furniture = "green_spaces_distance_to_public_furniture.data"
         self.out_playgrounds = "green_spaces_distance_to_playgrounds.data"
         self.out_dog_parks = "green_spaces_distance_to_fenced_dog_parks.data"
+        self.out_crime_stats = "safety_crime_stats_last_2.5_years.data"
 
     def write_collection_of_points_to_file(self, points, file):
         with open(file, 'w+') as output_file:
@@ -353,6 +355,46 @@ class DatasetPreprocessing:
             True
         )
 
+    def process_crime_stats(self, division_centers):
+        print(division_centers)
+        sum_of_all_crimes_2_5_years = dict()
+
+        for year in ['2015', '2016', '2017']:
+            file_name = self.raw_data_folder + '/' + self.in_crime_stats + "_" + year + ".csv"
+            print(file_name)
+            with open(file_name, 'r') as input:
+                points = []
+                lines = input.readlines()
+                for index, line in enumerate(lines):
+                    if index < 4:
+                        continue
+
+                    stripped_line = line.strip().split(",")
+                    stripped_subset = [int(n) for n in line.strip().split(",")[2:] if n != '']
+
+                    if stripped_line[1] != "":
+                        suburb = stripped_line[1]
+                        count_all_crimes = sum(stripped_subset)
+                        # print(suburb, count_all_crimes, year)
+                        if suburb in sum_of_all_crimes_2_5_years:
+                            sum_of_all_crimes_2_5_years[suburb] = sum_of_all_crimes_2_5_years[suburb] + (count_all_crimes)
+                        else:
+                            sum_of_all_crimes_2_5_years[suburb] = count_all_crimes
+
+        min_crime = min(sum_of_all_crimes_2_5_years.itervalues())
+        max_crime = max(sum_of_all_crimes_2_5_years.itervalues())
+
+        with open(self.output_folder + '/' + self.out_crime_stats, 'w') as output_file:
+            for key in sum_of_all_crimes_2_5_years:
+                crime = (float(sum_of_all_crimes_2_5_years[key] - min_crime) / float(max_crime - min_crime)) * float(100.0)
+                crime = 100.0 - crime
+                if key.upper() in division_centers:
+                    center = division_centers[key.upper()]
+                    output_file.write('[{},{},{},{}]\n'.format(key.upper(), center[0], center[1], crime))
+                else:
+                    # print("Not there: " + key.uspper())
+                    pass
+
     def execute(self):
         division_centers = self.process_act_division_boundaries()
         self.process_police_stations_locations(division_centers)
@@ -367,6 +409,7 @@ class DatasetPreprocessing:
         self.process_public_furniture(division_centers)
         self.process_playgrounds(division_centers)
         self.process_fenced_dog_park(division_centers)
+        self.process_crime_stats(division_centers)
 
 if __name__ == "__main__":
     preproc = DatasetPreprocessing()
