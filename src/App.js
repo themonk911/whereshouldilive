@@ -11,27 +11,42 @@ class DataConnector extends Component {
   {
     super();
     this.position =    [-35.325, 149.09];
-    this.compute_intensity = this.compute_intensity.bind(this);    
+    this.compute_intensity = this.compute_intensity.bind(this);
   }
   compute_intensity(weight_array, intensity_array)
   {
+    var magic_const = 10.0;
+    // The slider passes in things in chunks of 10.
+    // Need to divide by 10 to get back to normal.
     if (weight_array.length !== intensity_array.length)
     {
       return false;
     }
+    var normaliser = weight_array.length;
     var sum = 0;
     for (var i=0; i<weight_array.length; i++)
     {
-      sum += weight_array[i] * intensity_array[i];
+      sum += weight_array[i] * intensity_array[i] / magic_const;
     }
-    return sum/2;
+    if (isNaN(sum))
+    {
+        sum = normaliser;
+    }
+    if (normaliser > 0)
+    {
+        return sum/normaliser;
+    }
+    else
+    {
+        return sum;
+    }
   }
   onEachFeature(feature, layer) {
     layer.bindTooltip(feature.properties.division_name);
   }
  render() {
     return (
-    <div>
+    <div id="map">
       <Map center={this.position} zoom={11.2} >
             <LayersControl>
               <LayersControl.BaseLayer name="Base" checked>
@@ -60,7 +75,7 @@ class DataConnector extends Component {
               <LayersControl.Overlay name="Boundaries"
               fitBoundsOnLoad
               fitBoundsOnUpdate
-              checked              
+              checked
               >
              <GeoJSON data={boundary_json} />
               </LayersControl.Overlay>
