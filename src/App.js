@@ -15,7 +15,7 @@ class DataConnector extends Component {
   }
   compute_intensity(weight_array, intensity_array)
   {
-    var magic_const = 10.0;
+    var magic_const = 2.0;
     // The slider passes in things in chunks of 10.
     // Need to divide by 10 to get back to normal.
     if (weight_array.length !== intensity_array.length)
@@ -26,12 +26,13 @@ class DataConnector extends Component {
     var sum = 0;
     for (var i=0; i<weight_array.length; i++)
     {
-      sum += weight_array[i] * intensity_array[i] / magic_const;
+      sum += weight_array[i] * intensity_array[i];
     }
     if (isNaN(sum))
     {
-        sum = normaliser;
+        sum = normaliser * magic_const;
     }
+    sum *= magic_const;
     if (normaliser > 0)
     {
         return sum/normaliser;
