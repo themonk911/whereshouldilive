@@ -96,7 +96,7 @@ class Controls extends Component {
               Transport
               <Slider step={10} dots value={this.state.transport_intensity} onChange={this.handleChange6} />
             </li>
-          </ul>          
+          </ul>
 
           <ul className="actions vertical">
             <li><a href="#second" className="button smooth-scroll-middle"> Find out how it works </a></li>
@@ -117,10 +117,6 @@ class Controls extends Component {
         </section>
 
 </div>
-
-        // <DataConnector intensity={this.state.intensity} />
-        // <Slider step={10} dots value={this.state.intensity} onChange={this.handleChange}/>
-        // <div id='counter'>{this.state.intensity}</div>
 
     );
   }
